@@ -1,9 +1,7 @@
-import { TextAlignJustifyIcon } from "lucide-react";
 import { sectionsId } from "../../shared/SectionsId";
 import type { MenuOption } from "../../@types/MenuOption";
-import { MenuOpt } from "./MenuOption";
-import { motion } from "motion/react";
-import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import { MobileMenu } from "./Mobile";
 
 
 const menuOptions: Array<MenuOption> = [
@@ -15,58 +13,16 @@ const menuOptions: Array<MenuOption> = [
   { label: 'Contato', refTo: sectionsId.contact },
 ];
 
+
+
 export function Menu() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
-
-  function openMenu() {
-    setIsMenuOpen(true);
-  }
-
-  function closeMenu() {
-    setIsMenuOpen(false);
-  }
 
 
   return (
     <header className="text-white relative">
-      <button onClick={openMenu}>
-        <TextAlignJustifyIcon />
-      </button>
-
-      {isMenuOpen && (
-        <div
-          className="block w-screen h-screen fixed top-0"
-          onClick={closeMenu}
-        ></div>
-      )}
-
-      <motion.nav
-        initial={{
-          x: '-100%',
-        }}
-        animate={{
-          x: isMenuOpen ? 0 : '-100%',
-        }}
-        transition={{ duration: 0.5 }}
-        className={`
-        fixed 
-        top-0  
-        z-50
-        
-        h-screen 
-        w-[80%] max-w-[300px] 
-        py-10 
-        
-        bg-black/50 
-        
-        `}>
-        <ul>
-          {menuOptions.map(opt => {
-            return <MenuOpt option={opt} />
-          })}
-        </ul>
-      </motion.nav>
+      {isMobile && <MobileMenu options={menuOptions} />}
     </header >
   );
 }
