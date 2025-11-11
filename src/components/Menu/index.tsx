@@ -10,12 +10,10 @@ export function Menu() {
   const { content } = useLanguage();
 
   return (
-    <ContentArea tailwindCss="py-2">
-      <header className="text-white relative flex items-center justify-between">
-        {isMobile && <MobileMenu options={content.menu.options} />}
+    <header className="text-white relative flex items-center justify-between">
+      {isMobile && <MobileMenu options={content.menu.options} />}
 
-        <LanguageMode />
-      </header >
-    </ContentArea>
+      <LanguageMode />
+    </header >
   );
 }
