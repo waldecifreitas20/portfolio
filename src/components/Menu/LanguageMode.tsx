@@ -1,20 +1,21 @@
-import { useContext, useState } from "react";
-import { LanguageContext } from "../../providers/LanguageProvider";
+
 import type { Language } from "../../@types/Language";
+import { useLanguage } from "../../hooks/useLanguage";
+
 
 export function LanguageMode() {
-  const languages = useContext(LanguageContext);
-  const [activeLanguage, setActive] = useState(languages.getCurrent());
+  const { activeLanguage, switchTo, availableLanguages } = useLanguage();
 
   const activeClass = 'border-red-400';
 
   function handleClick(lang: Language) {
-    setActive(lang);
+    switchTo(lang);
+
   }
 
   return (
     <div className="flex h-full">
-      {languages.getAll().map(lang => {
+      {availableLanguages.map(lang => {
         return (
           <button
             onClick={() => handleClick(lang)}>

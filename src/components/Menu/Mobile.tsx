@@ -22,21 +22,22 @@ export function MobileMenu(props: MobileMenuProps) {
 
   return (
     <>
-
-
-      <button onClick={openMenu} className="block" >
-        <TextAlignJustifyIcon className="block size-8 overflow-hidden" style={{
-          color: Theme.primary
-        }} />
-      </button>
-
-
-      {isMenuOpen && (
-        <div
-          className="block w-screen h-screen fixed top-0"
-          onClick={closeMenu}
-        ></div>
-      )}
+      {isMenuOpen ?
+        (
+          //DISPOSER
+          <div
+            className="block w-screen h-screen fixed top-0"
+            onClick={closeMenu}
+          ></div>
+        ) : (
+          //OPENER
+          <button onClick={openMenu} className="block" >
+            <TextAlignJustifyIcon className="block size-8 overflow-hidden" style={{
+              color: Theme.primary
+            }} />
+          </button>
+        )
+      }
 
       {/* DRAWER */}
       <motion.nav
@@ -53,7 +54,7 @@ export function MobileMenu(props: MobileMenuProps) {
         inset-x-0
         z-50
 
-        h-screen 
+        h-screen
         w-[80%] max-w-[300px] 
         py-10 
         
@@ -61,7 +62,7 @@ export function MobileMenu(props: MobileMenuProps) {
         `}>
         <ul>
           {options.map(opt => {
-            return <MenuOpt option={opt} />
+            return <MenuOpt option={opt} onTap={closeMenu} />
           })}
         </ul>
       </motion.nav>

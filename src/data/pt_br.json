@@ -1,0 +1,34 @@
+{
+  "menu": {
+    "options": [
+      {
+        "label": "Inicio",
+        "refTo": "#hero"
+      },
+      {
+        "label": "Sobre",
+        "refTo": "#about"
+      },
+      {
+        "label": "Habilidades",
+        "refTo": "#skills"
+      },
+      {
+        "label": "Projetos",
+        "refTo": "#projects"
+      },
+      {
+        "label": "Serviços",
+        "refTo": "#services"
+      },
+      {
+        "label": "Contato",
+        "refTo": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Desenvolvedor Web",
+    "intro": "Soluções de software com foco na experiência do usuário. Aberto a oportunidades como freelancer."
+  }
+}

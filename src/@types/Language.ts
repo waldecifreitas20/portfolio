@@ -1,4 +1,6 @@
 export type Language = {
-  label: string;
+  label: LanguageLabel;
   imgPath: string;
 }
+
+export type LanguageLabel = "en" | "pt";
