@@ -1,5 +1,3 @@
-import { sectionsId } from "../../shared/SectionsId";
-import type { MenuOption } from "../../@types/MenuOption";
 import { useMediaQuery } from "react-responsive";
 import { MobileMenu } from "./Mobile";
 import { LanguageMode } from "./LanguageMode";

@@ -6,8 +6,8 @@ import { ContentProvider } from './providers/ContentProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <ContentProvider>
-        <App />
-      </ContentProvider>
+    <ContentProvider>
+      <App />
+    </ContentProvider>
   </StrictMode>,
 )
