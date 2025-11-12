@@ -7,5 +7,9 @@ export type Content = {
   hero: {
     title: string,
     intro: string,
+    buttons: {
+      projects: string,
+      contact: string
+    }
   }
 }

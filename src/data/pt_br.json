@@ -29,6 +29,10 @@
   },
   "hero": {
     "title": "Desenvolvedor Web",
-    "intro": "Soluções de software com foco na experiência do usuário. Aberto a oportunidades como freelancer."
+    "intro": "Soluções de software com foco na experiência do usuário. Aberto a oportunidades como freelancer.",
+    "buttons" : {
+      "projects" : "Ver Projetos",
+      "contact" : "Fale Comigo"
+    }
   }
 }

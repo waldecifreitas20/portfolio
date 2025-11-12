@@ -27,9 +27,12 @@
       }
     ]
   },
-
-  "hero" : {
-    "title" : "Full-Stack Developer",
-    "intro": "Software solutions focused on user experience. Open to freelance opportunities."
+  "hero": {
+    "title": "Full-Stack Developer",
+    "intro": "Software solutions focused on user experience. Open to freelance opportunities.",
+    "buttons": {
+      "projects": "See Projects",
+      "contact": "Let's Talk!"
+    }
   }
 }
