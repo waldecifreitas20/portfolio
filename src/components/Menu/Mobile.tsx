@@ -33,7 +33,7 @@ export function MobileMenu(props: MobileMenuProps) {
 
       {isMenuOpen && (
         <div
-          className="block w-screen h-screen fixed top-0"
+          className="block w-screen h-screen fixed top-0 z-10"
           onClick={closeMenu}
         ></div>
       )}

@@ -49,7 +49,16 @@ export function HomeSection() {
             <p className="font-normal text-white/70">{hero.intro}</p>
           </article>
 
-          <article className="flex flex-col gap-4 my-8">
+          <article 
+            className="
+            flex flex-col 
+            gap-4 my-8 
+            
+            md:flex-row 
+            md:max-w-[450px] 
+            md:mx-auto
+            
+            ">
             <Button>{hero.buttons.projects}</Button>
             <FlatButton>{hero.buttons.contact}</FlatButton>
           </article>
