@@ -1,7 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import { MobileMenu } from "./Mobile";
 import { LanguageMode } from "./LanguageMode";
-import { ContentArea } from "../ContentArea";
 import { useLanguage } from "../../hooks/useLanguage";
 
 
@@ -10,7 +9,7 @@ export function Menu() {
   const { content } = useLanguage();
 
   return (
-    <header className="text-white relative flex items-center justify-between">
+    <header className="text-white relative flex items-center justify-between bac">
       {isMobile && <MobileMenu options={content.menu.options} />}
 
       <LanguageMode />

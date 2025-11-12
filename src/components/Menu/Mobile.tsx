@@ -24,7 +24,7 @@ export function MobileMenu(props: MobileMenuProps) {
     <>
 
       {/* OPENER */}
-      <button onClick={openMenu} className={`block ${isMenuOpen && 'opacity-0' }`} >
+      <button onClick={openMenu} className={`block ${isMenuOpen && 'opacity-0'}`} >
         <TextAlignJustifyIcon className="block size-8 overflow-hidden" style={{
           color: Theme.primary
         }} />
@@ -56,8 +56,9 @@ export function MobileMenu(props: MobileMenuProps) {
         h-screen
         w-[80%] max-w-[300px] 
         py-10 
-        
-        bg-black/50 
+         
+        bg-purple-950/80
+        backdrop-blur-xs
         `}>
         <ul>
           {options.map(opt => {
