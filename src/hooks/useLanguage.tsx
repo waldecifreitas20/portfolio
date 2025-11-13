@@ -1,6 +1,6 @@
 import type { Language } from "../@types/Language";
 import { useContext, useState } from "react";
-import { ContentContext } from "../providers/ContentProvider";
+import { StaticContentContext } from "../providers/StaticContentProvider";
 import ptFlag from "../assets/pt-flag.png";
 import enFlag from "../assets/en-flag.png";
 
@@ -11,7 +11,7 @@ const languages = {
 };
 
 export function useLanguage() {
-  const contentProvider = useContext(ContentContext);
+  const contentProvider = useContext(StaticContentContext);
   const [activeLanguage, setActive] = useState<Language>(languages.pt);
 
 

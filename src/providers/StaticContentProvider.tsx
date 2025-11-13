@@ -2,11 +2,11 @@ import { createContext, useState, type PropsWithChildren } from "react";
 import ptContentJson from "../data/pt_br.json";
 import enContentJson from "../data/en.json";
 import type { LanguageLabel } from "../@types/Language";
-import type { Content } from "../@types/Content";
+import type {StaticContent } from "../@types/StaticContent";
 
-export const ContentContext = createContext({
+export const StaticContentContext = createContext({
   load: (_languageLabel: LanguageLabel) => { },
-  content: {} as Content,
+  content: {} as StaticContent,
 });
 
 const CONTENTS = {
@@ -14,8 +14,8 @@ const CONTENTS = {
   pt: ptContentJson,
 };
 
-export function ContentProvider(props: PropsWithChildren) {
-  const [content, setContent] = useState<Content>(CONTENTS.pt);
+export function StaticContentProvider(props: PropsWithChildren) {
+  const [content, setContent] = useState<StaticContent>(CONTENTS.pt);
 
   function load(languageLabel: LanguageLabel) {
     let selected = CONTENTS.pt;
@@ -28,11 +28,11 @@ export function ContentProvider(props: PropsWithChildren) {
 
 
   return (
-    <ContentContext.Provider value={{
+    <StaticContentContext.Provider value={{
       content,
       load,
     }}>
       {props.children}
-    </ContentContext.Provider>
+    </StaticContentContext.Provider>
   );
 }
