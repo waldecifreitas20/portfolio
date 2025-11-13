@@ -6,13 +6,9 @@ export function DesktopBackground() {
   const [video, setVideo] = useState('');
 
   useEffect(() => {
-    console.log(isMobile);
-
     if (!isMobile) {
       import('../assets/bg-hero-desktop.mp4')
         .then(video => setVideo(video.default));
-    } else {
-      setVideo('');
     }
   }, [isMobile]);
 
