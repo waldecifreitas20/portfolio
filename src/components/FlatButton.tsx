@@ -1,5 +1,4 @@
 import type { ButtonHTMLAttributes } from "react";
-import { Theme } from "../shared/Theme";
 
 interface FlatButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { }
 
