@@ -14,7 +14,7 @@ export function LanguageMode() {
   }
 
   return (
-    <div className="flex h-full absolute z-0 right-0 top-0">
+    <div className="flex h-full gap-2 absolute z-0 right-0 top-0">
       {availableLanguages.map(lang => {
         return (
           <button

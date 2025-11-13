@@ -7,12 +7,13 @@ import { Theme } from "../shared/Theme";
 export function HeroText() {
   const { content } = useLanguage();
   const { hero } = content;
-  
+
   return (
     <section
       className="
-            text-white font-bold text-center mt-20
-            
+            text-white font-bold text-center 
+            mt-20 mx-auto
+              
             lg:text-left
             lg:m-0
             ">

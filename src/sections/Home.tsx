@@ -17,9 +17,9 @@ export function HomeSection() {
       <ContentArea tailwindCss="py-2 relative z-10">
         <Menu />
 
-        <div className="flex items-center  lg:mt-20">
+        <div className="flex items-center lg:mt-20">
           <HeroText />
-          <img className=" w-1/2 h-full" src={heroBanner} alt="banner" />
+          <img className="hidden lg:block w-1/2 h-full" src={heroBanner} alt="banner" />
         </div>
       </ContentArea>
     </section>
