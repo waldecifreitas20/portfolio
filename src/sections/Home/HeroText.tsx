@@ -1,8 +1,8 @@
-import { Button } from "../components/Button";
-import { FlatButton } from "../components/FlatButton";
-import { SocialsMedia } from "../components/SocialsMedia";
-import { useLanguage } from "../hooks/useLanguage";
-import { Theme } from "../shared/Theme";
+import { Button } from "../../components/Button";
+import { FlatButton } from "../../components/FlatButton";
+import { SocialsMedia } from "../../components/SocialsMedia";
+import { useLanguage } from "../../hooks/useLanguage";
+import { Theme } from "../../shared/Theme";
 
 export function HeroText() {
   const { content } = useLanguage();

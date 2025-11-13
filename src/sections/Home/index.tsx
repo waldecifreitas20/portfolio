@@ -1,6 +1,6 @@
-import { ContentArea } from "../components/ContentArea";
-import { Menu } from "../components/Menu";
-import { DesktopBackground } from "../components/DesktopBackground";
+import { ContentArea } from "../../components/ContentArea";
+import { Header } from "./Header";
+import { DesktopBackground } from "../../components/DesktopBackground";
 import mobileBackground from "../assets/bg-hero-mobile.jpg";
 import { HeroText } from "./HeroText";
 import heroBanner from "../assets/hero-laptop.png";
@@ -14,8 +14,9 @@ export function HomeSection() {
         backgroundSize: 'cover',
       }}>
       <DesktopBackground />
+
       <ContentArea tailwindCss="py-2 relative z-10">
-        <Menu />
+        <Header />
 
         <div className="flex items-center lg:mt-20">
           <HeroText />

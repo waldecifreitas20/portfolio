@@ -1,9 +1,9 @@
 import { TextAlignJustifyIcon } from "lucide-react";
 import { useState } from "react";
 import { motion } from "motion/react";
-import type { Menu } from "../../@types/Menu";
+import type { Menu } from "../../../@types/Menu";
 import { MenuOpt } from "./MenuOption";
-import { Theme } from "../../shared/Theme";
+import { Theme } from "../../../shared/Theme";
 
 interface MobileMenuProps extends Menu { }
 

@@ -1,11 +1,11 @@
 import { useMediaQuery } from "react-responsive";
 import { MobileMenu } from "./Mobile";
 import { LanguageMode } from "./LanguageMode";
-import { useLanguage } from "../../hooks/useLanguage";
+import { useLanguage } from "../../../hooks/useLanguage";
 import { DesktopMenu } from "./DesktopMenu";
 
 
-export function Menu() {
+export function Header() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const { content } = useLanguage();
 
