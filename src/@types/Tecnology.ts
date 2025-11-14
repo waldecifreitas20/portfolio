@@ -1,4 +1,3 @@
-import type { Project } from "./Project"
 import type { Skill } from "./Skill"
 
 export type Technology = {
@@ -7,6 +6,5 @@ export type Technology = {
   description: string,
   isBackend?: boolean,
   skills: Array<Skill>,
-  projects: Array<Project>,
   color: string,
 }
