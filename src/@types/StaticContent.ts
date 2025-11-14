@@ -1,3 +1,4 @@
+
 import type { MenuOption } from "./MenuOption";
 
 export type StaticContent = {
@@ -15,5 +16,6 @@ export type StaticContent = {
   about: {
     title: string,
     text: Array<string>
-  }
+  },
+  tech: { title: string }
 }

@@ -44,7 +44,5 @@
     ]
   },
 
-  "skills" : {
-    "title": "Skills & Technologies"
-  }
+  "tech": { "title": "Technologies" }
 }

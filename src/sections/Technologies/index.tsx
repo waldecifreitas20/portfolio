@@ -1,9 +1,11 @@
 import { ContentArea } from "../../components/ContentArea";
 import { SectionTitle } from "../../components/SectionTitle";
+import { useLanguage } from "../../hooks/useLanguage";
 import { Theme } from "../../shared/Theme";
 import { TechnologiesView } from "./TechnologiesView";
 
 export function Technologies() {
+  const {title} = useLanguage().content.tech;
   return (
     <section
       className="py-10"
@@ -13,7 +15,7 @@ export function Technologies() {
         ${Theme.background.bgDarker})`
       }}>
       <ContentArea>
-        <SectionTitle text="Tecnologias" />
+        <SectionTitle text={title} />
         <TechnologiesView />
       </ContentArea>
     </section>
