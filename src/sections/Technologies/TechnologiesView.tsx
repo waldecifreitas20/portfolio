@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Theme } from "../../shared/Theme";
 import { Tab } from "./Tab";
+import { Api } from "../../api/api";
+import { TechViewItem } from "./TechViewItem";
+import type { Technology } from "../../@types/Tecnology";
 
 enum tabs {
   frontend, backend
@@ -8,6 +11,16 @@ enum tabs {
 
 export function TechnologiesView() {
   const [activeTab, setActiveTab] = useState(tabs.frontend);
+  const [techs, setTechs] = useState<Array<Technology>>([]);
+
+  useEffect(() => {
+    Api
+      .fetchData()
+      .then(data => {
+        setTechs(data.technologies as Array<Technology>);
+      });
+  }, []);
+
 
   function handleTabClick(tabId: number) {
     setActiveTab(tabId);
@@ -16,7 +29,7 @@ export function TechnologiesView() {
   return (
     <div>
       {/*controlers */}
-      <div className="flex">
+      <article className="flex">
         <Tab
           id={tabs.frontend}
           activeColor={Theme.accent}
@@ -31,11 +44,13 @@ export function TechnologiesView() {
           text="Back-end"
           onClick={handleTabClick}
         />
-      </div>
-
-      <article>
-
       </article>
+
+      <ul>
+        {techs.map(tech => {
+          return <TechViewItem tech={tech} />
+        })}
+      </ul>
 
     </div>
   );

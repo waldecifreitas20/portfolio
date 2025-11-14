@@ -1,7 +1,13 @@
-import { technologies } from "../mock/technologies";
+import type { Technology } from "../@types/Tecnology";
 
-async function fetchData() {
-  return {
-    technologies,
-  }
+
+type Data = { technologies: Array<Technology> };
+
+async function fetchData(): Promise<Data> {
+  const response = await fetch('/mock/technologies.json')
+  return response.json();
+}
+
+export const Api = {
+  fetchData
 }
