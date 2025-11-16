@@ -9,7 +9,11 @@ enum tabs {
   frontend, backend
 }
 
-export function TechnologiesView() {
+interface TechnologiesViewProps {
+  onSelectedTech: (tech: Technology) => void;
+}
+
+export function TechnologiesView(props: TechnologiesViewProps) {
   const [activeTab, setActiveTab] = useState(tabs.frontend);
   const [techs, setTechs] = useState({
     backend: [] as Array<Technology>,
@@ -37,7 +41,7 @@ export function TechnologiesView() {
   }
 
   return (
-    <div>
+    <div className="w-full block">
       <article className="flex mb-4">
         <Tab
           id={tabs.frontend}
@@ -57,7 +61,7 @@ export function TechnologiesView() {
 
       <ul>
         {getSelectedTechs().map(tech => {
-          return <TechViewItem tech={tech} />
+          return <TechViewItem tech={tech} onClick={props.onSelectedTech} />
         })}
       </ul>
 

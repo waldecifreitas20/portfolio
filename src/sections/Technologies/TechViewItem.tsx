@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+import { useContext } from "react";
 import type { Technology } from "../../@types/Technology";
 import { Theme } from "../../shared/Theme";
 import { ProgressBar } from "./ProgressBar";
@@ -6,6 +6,7 @@ import { ProjectsContext } from "../../providers/TechnologyProvider";
 
 interface TechViewItemProps {
   tech: Technology,
+  onClick: (tech: Technology) => void;
 }
 
 export function TechViewItem(props: TechViewItemProps) {
@@ -32,7 +33,9 @@ export function TechViewItem(props: TechViewItemProps) {
       active:scale-[0.98]
       rounded-lg
       transition-all duration-300 select-none
-      ">
+      "
+      onClick={() => props.onClick(props.tech)}
+    >
       <div className="flex w-full gap-5 mb-2 ">
         <img className="size-10" src={tech.iconUrl} alt={tech.name} />
         <p className="text-white text-lg">{tech.name}</p>
