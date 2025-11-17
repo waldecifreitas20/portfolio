@@ -4,7 +4,7 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { ProjectsContext } from "../../providers/ProjectProvider";
 import { ColoredLabel } from "../../components/ColoredLabel";
 import { List } from "../../components/List";
-import { Check, Circle, CircleSmall, Link } from "lucide-react";
+import { CircleSmall, Link } from "lucide-react";
 
 interface TechnologyDetailsProps {
   technology: Technology;
