@@ -19,6 +19,7 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
       className="
       block border border-white/50 rounded-lg 
       h-max w-full
+      mt-5 md:mt-0
       text-white/70
       p-4
     ">
