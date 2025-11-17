@@ -22,7 +22,9 @@ export function TechViewItem(props: TechViewItemProps) {
     return Math.round(appearances / totalProjects * 100);
   }
 
-
+  function getThemeColor() {
+    return tech.isBackend ? Theme.primary : Theme.accent;
+  }
 
   return (
     <li
@@ -36,17 +38,25 @@ export function TechViewItem(props: TechViewItemProps) {
       "
       onClick={() => props.onClick(props.tech)}
     >
+
       <div className="flex w-full gap-5 mb-2 ">
         <img className="size-10" src={tech.iconUrl} alt={tech.name} />
         <p className="text-white text-lg">{tech.name}</p>
-
-        <p className="text-white/50 text-xs ml-auto">{percentOfUse}%</p>
+        <div className="ml-auto items-center flex gap-1">
+          {percentOfUse === 100 && (
+            <p
+              className="select-none text-xs w-fit p-1"
+              style={{ color: getThemeColor() }}
+            >Stack</p>
+          )}
+          <p className="text-white/50 text-xs">{percentOfUse}%</p>
+        </div>
       </div>
 
       <ProgressBar
         max={100}
         value={percentOfUse}
-        fillColor={tech.isBackend ? Theme.primary : Theme.accent} />
+        fillColor={getThemeColor()} />
     </li>
   );
 }
