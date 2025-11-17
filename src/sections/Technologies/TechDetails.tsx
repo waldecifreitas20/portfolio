@@ -4,6 +4,7 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { ProjectsContext } from "../../providers/ProjectProvider";
 import { ColoredLabel } from "../../components/ColoredLabel";
 import { List } from "../../components/List";
+import { Check, Circle, CircleSmall, Link } from "lucide-react";
 
 interface TechnologyDetailsProps {
   technology: Technology;
@@ -34,7 +35,10 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
           textSize="text-base">
           {skills}
         </ColoredLabel>
-        <List items={props.technology.skills} />
+        <List
+          items={props.technology.skills}
+          icon={<CircleSmall size={14} />}
+        />
       </div>
 
       <div className="mt-4">
@@ -43,7 +47,12 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
           textSize="text-base">
           {projects}
         </ColoredLabel>
-        <List items={getAllByTech(props.technology)} />
+        <List
+          items={getAllByTech(props.technology)}
+          icon={<Link size={14} />}
+          useLink
+          linkKeyname="deploy"
+        />
       </div>
 
     </article>
