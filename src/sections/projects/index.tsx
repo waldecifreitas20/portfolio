@@ -7,20 +7,21 @@ import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 export function ProjectsSection() {
   const { title } = useLanguage().content.projects;
-  const { isMobile } = useBreakpoint();
+  const { isMobile } = useBreakpoint(767);
 
   return (
     <section
-      className="h-screen w-full"
+      className="h-screen w-screen block"
       style={{
         background: `url(${isMobile ? mobileBg : desktopBg}) no-repeat`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'top center'
       }}
     >
 
       <ContentArea>
         <SectionTitle text={title} />
+        <p className="block border text-red-500">alskjdlasjjdl</p>
       </ContentArea>
     </section>
   );
