@@ -4,6 +4,7 @@ import { useLanguage } from "../../hooks/useLanguage";
 import mobileBg from "../../assets/bg-projects-mobile.jpg";
 import desktopBg from "../../assets/bg-projects-desktop.jpg";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
+import { ProjectsView } from "./ProjectsView/ProjectsView";
 
 export function ProjectsSection() {
   const { title } = useLanguage().content.projects;
@@ -21,7 +22,9 @@ export function ProjectsSection() {
 
       <ContentArea>
         <SectionTitle text={title} />
-        <p className="block border text-red-500">alskjdlasjjdl</p>
+        {/* project list */}
+        <ProjectsView />
+        {/* PROJECT DETAILS */}
       </ContentArea>
     </section>
   );
