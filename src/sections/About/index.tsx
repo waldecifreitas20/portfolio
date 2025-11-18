@@ -6,7 +6,7 @@ export function About() {
   const { about } = content;
 
   return (
-    <section className="text-white/70 py-10 bg-[var(--bg-light)]">
+    <section className="text-white/70 py-10 bg-(--bg-light)">
       <ContentArea>
         <SectionTitle text={about.title} />
 

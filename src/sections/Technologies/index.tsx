@@ -16,7 +16,7 @@ export function TechnologiesSection() {
 
   return (
     <section
-      className="pt-10 pb-20 bg-linear-to-b from-[var(--bg-dark)] to-[var(--bg-darker)]">
+      className="pt-10 pb-20 bg-linear-to-b from-(--bg-dark) to-(--bg-darker)">
       <ContentArea>
         <SectionTitle text={title} />
         <div className="md:flex gap-4">

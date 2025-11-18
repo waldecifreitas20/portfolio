@@ -55,7 +55,7 @@ export function MobileMenu(props: MobileMenuProps) {
         w-[80%] max-w-[300px] 
         py-10 
          
-        bg-purple-950/80
+        bg-(--bg-dark)/80
         backdrop-blur-xs
         `}>
         <ul>

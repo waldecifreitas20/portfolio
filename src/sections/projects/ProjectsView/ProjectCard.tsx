@@ -6,12 +6,12 @@ export function Card(props: PropsWithChildren) {
     <div
       className={`
         p-4 
-        bg-[var(--bg-card)]
+        bg-(--bg-card)
 
         border 
         rounded-xl
-        border-[var(--primary)]/20
-        hover:border-[var(--primary)]
+        border-(--primary)/20
+        hover:border-(--primary)
         
         transition-all duration-100
         shadow-lg
