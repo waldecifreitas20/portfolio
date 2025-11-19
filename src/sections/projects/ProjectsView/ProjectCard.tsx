@@ -35,7 +35,7 @@ export function ProjectCard(props: ProjectCardProps) {
         relative rounded-lg 
         block overflow-hidden
         ">
-        <img className="" src={project.previewUrl} alt={project.name} />
+        <img className="object-cover block min-h-50" src={project.previewUrl} alt={project.name} />
         <div
           className="
           size-full 
