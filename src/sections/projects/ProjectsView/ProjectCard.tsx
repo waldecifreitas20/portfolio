@@ -1,6 +1,7 @@
 import { useLanguage } from "../../../hooks/useLanguage";
 import type { Project } from "../../../@types/Project";
 import { Play } from "lucide-react";
+import { PrimaryButton } from "../../../components/PrimaryButton";
 
 interface ProjectCardProps {
   project: Project;
@@ -57,14 +58,9 @@ export function ProjectCard(props: ProjectCardProps) {
           <p className="font-bold">{project.name}</p>
         </span>
 
-        <button
-          className="
-          cursor-pointer
-          bg-(--primary) hover:bg-(--primary-hover) 
-          h-fit 
-          px-6 py-2 
-          rounded-md
-        ">{details}</button>
+        <div className="w-[150px] sm:w-[100px]">
+          <PrimaryButton>{details}</PrimaryButton>
+        </div>
       </div>
     </div>
   );
