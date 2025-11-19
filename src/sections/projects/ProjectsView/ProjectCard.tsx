@@ -5,12 +5,17 @@ import { PrimaryButton } from "../../../components/PrimaryButton";
 
 interface ProjectCardProps {
   project: Project;
+  onClickSeeMore: (project: Project) => void;
 }
 
 
 export function ProjectCard(props: ProjectCardProps) {
   const { details } = useLanguage().content.projects.buttons;
-  const { project } = props;
+  const { project, onClickSeeMore } = props;
+
+  function handleClick() {
+    onClickSeeMore(project)
+  }
 
   return (
     <div
@@ -59,7 +64,7 @@ export function ProjectCard(props: ProjectCardProps) {
         </span>
 
         <div className="w-[150px] sm:w-[100px]">
-          <PrimaryButton>{details}</PrimaryButton>
+          <PrimaryButton onClick={handleClick}>{details}</PrimaryButton>
         </div>
       </div>
     </div>

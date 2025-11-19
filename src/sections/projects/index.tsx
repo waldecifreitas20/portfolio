@@ -5,10 +5,14 @@ import mobileBg from "../../assets/bg-projects-mobile.jpg";
 import desktopBg from "../../assets/bg-projects-desktop.jpg";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { ProjectsView } from "./ProjectsView/ProjectsView";
+import { ProjectDetails } from "./ProjectsView/ProjectDetails";
+import { useState } from "react";
+import type { Project } from "../../@types/Project";
 
 export function ProjectsSection() {
   const { title } = useLanguage().content.projects;
   const { isMobile } = useBreakpoint(767);
+  const [selectedProject, setSelectedProject] = useState<Project>();
 
   return (
     <section
@@ -19,8 +23,11 @@ export function ProjectsSection() {
       <ContentArea>
         <SectionTitle text={title} />
         {/* project list */}
-        <ProjectsView />
+        <ProjectsView onSeeDetails={(project) => setSelectedProject(project)} />
         {/* PROJECT DETAILS */}
+        {selectedProject && (
+          <ProjectDetails project={selectedProject} />
+        )}
       </ContentArea>
     </section>
   );
