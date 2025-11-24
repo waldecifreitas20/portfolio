@@ -22,18 +22,41 @@ export function ProjectsSection() {
 
   return (
     <section
-      className="relative min-h-screen w-screen block bg-cover bg-top bg-no-repeat"
+      className="
+      overflow-hidden  
+      min-h-screen max-w-screen 
+      block 
+      bg-cover bg-top bg-no-repeat"
       style={{ background: `url(${isMobile ? mobileBg : desktopBg})` }}
     >
 
       <ContentArea>
+
         <SectionTitle text={title} />
+
         {/* project list */}
-        <ProjectsView onSeeDetails={onSelectProject} />
-        {/* PROJECT DETAILS */}
-        {selectedProject && (
-          <ProjectDetails project={selectedProject}  />
-        )}
+
+        <div className="
+        flex w-full justify-center 
+        items-center h-max flex-wrap
+        md:justify-between
+        md:flex-nowrap
+        md:items-start
+        gap-4
+        ">
+          {/* PROJECT DETAILS */}
+          <div className={selectedProject ? "w-fit" : "w-full"}>
+            <ProjectsView onSeeDetails={onSelectProject} shrink={selectedProject !== undefined} />
+          </div>
+          {selectedProject && (
+            <div className="sm:max-w-[400px] md:w-full -order-1 md:order-1">
+              <ProjectDetails
+                project={selectedProject}
+                onDismiss={() => setSelectedProject(undefined)}
+              />
+            </div>
+          )}
+        </div>
       </ContentArea>
     </section>
   );

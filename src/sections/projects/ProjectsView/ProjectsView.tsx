@@ -7,21 +7,27 @@ import { ProjectCard } from "./ProjectCard";
 
 interface ProjectsViewProps {
   onSeeDetails: (project: Project) => void;
+  shrink: boolean
 }
 
 export const ProjectsView = memo(function (props: ProjectsViewProps) {
   const { getProjects } = useProjects();
 
+  const responsibleClasses = `md:grid-cols-2 lg:grid-cols-3`;
+  const classesOnShrink = ` md:grid-cols-1 lg:grid-cols-2`;
+
+
   return (
     <ul
-      className="
-      flex flex-col gap-8
+      className={`
+      flex gap-4
+      flex-wrap
       justify-center
-      sm:grid
-      sm:grid-cols-2
+ 
+      md:grid
       
-      lg:grid-cols-3
-      ">
+      ${props.shrink ? classesOnShrink : responsibleClasses}
+        `}>
       {
         getProjects()
           .map((project, i) => {
@@ -31,6 +37,6 @@ export const ProjectsView = memo(function (props: ProjectsViewProps) {
               onClickSeeMore={props.onSeeDetails}
             />;
           })}
-    </ul>
+    </ul >
   );
 })

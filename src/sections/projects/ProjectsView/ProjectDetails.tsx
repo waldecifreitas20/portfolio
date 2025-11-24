@@ -8,6 +8,7 @@ import { TechSubsection } from "./TechSubSection";
 
 interface ProjectDetailsProps {
   project: Project;
+  onDismiss: (project: Project) => void;
 }
 
 export function ProjectDetails(props: ProjectDetailsProps) {
@@ -16,15 +17,16 @@ export function ProjectDetails(props: ProjectDetailsProps) {
 
   return (
     <div
-      className="
-      absolute 
+      className=" 
       text-white 
-      z-50 top-0 
       px-4 pb-4
       bg-zinc-900 
       w-full 
       border border-(--primary) rounded-lg">
-      <button className="flex items-center gap-2 leading-10">
+      <button
+        className="flex items-center gap-2 leading-10"
+        onClick={() => props.onDismiss(props.project)}
+      >
         <MoveLeft /> {buttons.close}
       </button>
       <ImageContainer src={project.previewUrl} />
