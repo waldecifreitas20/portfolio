@@ -1,7 +1,7 @@
 import { About } from "./About";
 import { HomeSection } from "./Home";
 import { TechnologiesSection } from "./Technologies";
-import { ProjectsSection } from "./projects";
+import { ProjectsSection } from "./Projects";
 
 export {
   About,
