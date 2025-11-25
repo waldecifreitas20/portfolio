@@ -40,6 +40,6 @@ export type StaticContent = {
   services: {
     title: string,
     cards: Array<Service>,
-    cta: string,
+    buttonCta: string,
   }
 }
