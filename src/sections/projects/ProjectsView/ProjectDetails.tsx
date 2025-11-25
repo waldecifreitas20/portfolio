@@ -1,10 +1,11 @@
-import { MoveLeft } from "lucide-react";
+import { ExternalLink, ExternalLinkIcon, MoveLeft } from "lucide-react";
 import type { Project } from "../../../@types/Project";
 import { ImageContainer } from "../../../components/ImageContainer";
 import { useLanguage } from "../../../hooks/useLanguage";
-import { PrimaryButton } from "../../../components/PrimaryButton";
+import { Button } from "../../../components/Button";
 import { ColoredLabel } from "../../../components/ColoredLabel";
 import { TechSubsection } from "./TechSubSection";
+import { GithubIcon } from "../../../components/GitHubIcon";
 
 interface ProjectDetailsProps {
   project: Project;
@@ -19,8 +20,8 @@ export function ProjectDetails(props: ProjectDetailsProps) {
     <div
       className=" 
       text-white 
-      px-4 pb-4
-      bg-zinc-900 
+      px-4 pb-4 md:px-6 md:pb-6
+      bg-[#140F14]
       w-full 
       border border-(--primary) rounded-lg">
       <button
@@ -30,16 +31,26 @@ export function ProjectDetails(props: ProjectDetailsProps) {
         <MoveLeft /> {buttons.close}
       </button>
       <ImageContainer src={project.previewUrl} />
-      <p className="font-bold text-xl my-4">
+      <p className="font-bold text-xl lg:text-2xl my-4">
         {project.name}
         <span className="w-10 mt-2 block border-b-3 border-(--primary)"></span>
       </p>
 
-      <p>{project.description}</p>
+      <p className="text-white/70">{project.description}</p>
 
-      <div className="my-4 pb-4 flex flex-col md:flex-row gap-2 border-b border-white/5">
-        <PrimaryButton>{buttons.repository}</PrimaryButton>
-        <PrimaryButton>{buttons.deploy}</PrimaryButton>
+      <div className="my-4 pb-4 flex flex-col md:flex-row gap-2 md:gap-4 border-b border-white/5">
+        <Button style="flex justify-center gap-2 font-bold md:py-3">
+          <span className="h-6">
+            <GithubIcon />
+          </span>
+          {buttons.repository}
+        </Button>
+        <Button accent style="flex justify-center gap-2 font-bold md:py-3">
+          <span className=" h-6">
+            <ExternalLinkIcon />
+          </span>
+          {buttons.deploy}
+        </Button>
       </div>
 
 

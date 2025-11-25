@@ -1,4 +1,4 @@
-import { Button } from "../../components/Button";
+import { AnimatedButton } from "../../components/AnimatedButton";
 import { FlatButton } from "../../components/FlatButton";
 import { SocialsMedia } from "../../components/SocialsMedia";
 import { useLanguage } from "../../hooks/useLanguage";
@@ -37,7 +37,7 @@ export function HeroText() {
               lg:mr-auto
               
               ">
-        <Button>{hero.buttons.projects}</Button>
+        <AnimatedButton>{hero.buttons.projects}</AnimatedButton>
         <FlatButton>{hero.buttons.contact}</FlatButton>
       </article>
 

@@ -1,7 +1,7 @@
 import { useLanguage } from "../../../hooks/useLanguage";
 import type { Project } from "../../../@types/Project";
 import { Play } from "lucide-react";
-import { PrimaryButton } from "../../../components/PrimaryButton";
+import { AnimatedButton } from "../../../components/AnimatedButton";
 
 interface ProjectCardProps {
   project: Project;
@@ -64,7 +64,7 @@ export function ProjectCard(props: ProjectCardProps) {
         </span>
 
         <div className="w-[150px] sm:w-[100px]">
-          <PrimaryButton onClick={handleClick}>{details}</PrimaryButton>
+          <AnimatedButton onClick={handleClick} padding="p-2">{details}</AnimatedButton>
         </div>
       </div>
     </div>

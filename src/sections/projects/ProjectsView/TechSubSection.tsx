@@ -20,9 +20,10 @@ export function TechSubsection(props: TechSubsectionProps) {
               className="
               py-1 px-3 
               text-sm 
-              bg-zinc-800 
-              border text-zinc-400 
-              w-fit rounded-lg"
+              bg-[#282328] 
+              border border-white/10 
+              w-fit rounded-md
+              "
               style={{ color: tech.color }}>{tech.name}</p>;
           })
       }</ul>

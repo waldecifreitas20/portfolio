@@ -1,23 +1,36 @@
-import type { ButtonHTMLAttributes } from "react";
+import type { PropsWithChildren } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  role: "primary" | "accent";
+interface ButtonProps extends PropsWithChildren {
+  accent?: boolean;
+  onClick?: () => void;
+  style?: string;
 }
 
 export function Button(props: ButtonProps) {
-  const bgColor = `bg-(--${props.role})`.toString();
-  const bgColorHover = `hover:bg-(--${props.role}-hover)`.toString();
+  const buttonColors = props.accent ?
+    ("bg-(--accent) hover:bg-(--accent-hover)") :
+    ("bg-(--primary) hover:bg-(--primary-hover)");
 
+
+  function handleClick(evt: any) {
+    if (props.onClick) {
+      props.onClick();
+    }
+  }
   return (
     <button
       className={`
       p-2 
-      ${bgColor}  ${bgColorHover}
+      ${buttonColors}
       block w-full 
       shadow-md rounded-md 
-      font-normal cursor-pointer  
+      cursor-pointer  
+
+      ${props.style ?? ''}
       `}
-      {...props}
-    >{props.children}</button>
+      onClick={handleClick}
+    >
+      {props.children}
+    </button>
   );
 }
