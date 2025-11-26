@@ -9,12 +9,12 @@ export function HomeSection() {
   return (
     <section
       id="hero"
-      className="h-screen w-full overflow-hidden relative bg-cover bg-no-repeat bg-top"
+      className="min-h-screen w-full overflow-hidden relative bg-cover bg-no-repeat bg-top"
       style={{ background: `url(${mobileBackground})`, }}>
 
       <DesktopBackground />
 
-      <ContentArea tailwindCss="py-2 relative z-10">
+      <ContentArea tailwindCss="py-2 lg:py-4 relative z-10">
         <Header />
 
         <div className="flex items-center lg:mt-20">
