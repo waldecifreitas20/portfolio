@@ -17,7 +17,7 @@ export function Input(props: InputProps) {
 
 
   return (
-    <div>
+    <div className="w-full">
       <label htmlFor="name" className="block mb-1">
         {props.label}:
         {props.required && <span className="text-(--primary)">*</span>}
