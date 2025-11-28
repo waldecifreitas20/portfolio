@@ -2,16 +2,16 @@
   "projects": [
     {
       "id": "",
-      "name": "Tasky",
-      "previewUrl": "/mock/projectpreview.png",
-      "category": "Gerenciador",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien vel augue commodo interdum. Curabitur nec urna id libero feugiat facilisis.",
-      "repository": "",
-      "deploy": "",
+      "name": "Portifolio",
+      "previewUrl": "/mock/portfolio.png",
+      "category": "Portifolio",
+      "description": "Portfólio pessoal desenvolvido em React e tecnologias full-stack, apresentando meus projetos, habilidades e experiência com foco em performance, responsividade e design moderno.",
+      "repository": "https://github.com/waldecifreitas20/portfolio-front-end  ",
+      "deploy": "/",
       "technologies": [
         {
           "name": "React.js",
-          "color": "blue",
+          "color": "cian",
           "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
           "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
           "isBackend": false,
@@ -37,7 +37,7 @@
         {
           "name": "Typescript",
           "color": "blue",
-          "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
+          "description": "Typescript",
           "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
           "isBackend": false,
           "skills": [
@@ -132,15 +132,15 @@
     {
       "id": "",
       "name": "Makeshop",
-      "previewUrl": "/mock/projectpreview.png",
+      "previewUrl": "/mock/makeshop.png",
       "category": "E-commerce",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien vel augue commodo interdum. Curabitur nec urna id libero feugiat facilisis.",
+      "description": "Loja virtual focada em produtos voltados ao público feminino. Possui integração com Firebase",
       "repository": "",
-      "deploy": "",
+      "deploy": "https://makeshop-store.vercel.app",
       "technologies": [
         {
           "name": "React.js",
-          "color": "blue",
+          "color": "cian",
           "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
           "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
           "isBackend": false,
@@ -214,8 +214,8 @@
           ]
         },
         {
-          "name": "NodeJs",
-          "color": "green",
+          "name": "Firebase",
+          "color": "orange",
           "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
           "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
           "isBackend": true,
@@ -260,15 +260,15 @@
     },
     {
       "id": "",
-      "name": "Ritek",
-      "previewUrl": "/mock/projectpreview.png",
-      "category": "Web Player",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien vel augue commodo interdum. Curabitur nec urna id libero feugiat facilisis.",
+      "name": "Tasky",
+      "previewUrl": "/mock/tasky.png",
+      "category": "Gerenciador",
+      "description": "Aplicação full-stack que auxilia no gerenciamento de atividades do dia-a-dia, adicionando tarefas a serem realizas com horários e datas específica. Suporta autenticação com conta Google ou cadastro nativo com email e senha",
       "repository": "",
-      "deploy": "",
+      "deploy": "https://github.com/waldecifreitas20/portfolio-front-end",
       "technologies": [
         {
-          "name": "Javascript",
+          "name": "Typescript",
           "color": "blue",
           "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
           "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
@@ -294,7 +294,7 @@
         },
         {
           "name": "React.js",
-          "color": "blue",
+          "color": "cian",
           "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
           "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
           "isBackend": false,
@@ -320,6 +320,31 @@
         {
           "name": "Express.js",
           "color": "gray",
+          "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
+          "isBackend": true,
+          "skills": [
+            {
+              "id": "skil0wr",
+              "name": "Gerenciamento de Estados"
+            },
+            {
+              "id": "skil0wr",
+              "name": "Manipulação do DOM"
+            },
+            {
+              "id": "skil0wr",
+              "name": "Uso de Hooks"
+            },
+            {
+              "id": "skil0wr",
+              "name": "Integração com API"
+            }
+          ]
+        },
+        {
+          "name": "PostgresSQL",
+          "color": "blue",
           "description": "React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir interfaces de usuário (UIs) de forma eficiente e declarativa.",
           "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
           "isBackend": true,
