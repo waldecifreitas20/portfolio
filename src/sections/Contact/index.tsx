@@ -26,7 +26,8 @@ export function ContactSection() {
       const all = Object.fromEntries(data.entries());
       setTimeout(() => {
         setIsSubmitting(false);
-      }, 5000);
+        alert("Mensagen enviada! Obrigado por entrar em contato. Em breve estarei entrando em conato com você. ");
+      }, 2000);
     }
   }
 
