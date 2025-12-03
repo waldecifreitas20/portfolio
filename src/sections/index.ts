@@ -1,7 +1,7 @@
 import { About } from "./About";
 import { HomeSection } from "./Home";
 import { TechnologiesSection } from "./Technologies";
-import { ProjectsSection } from "./Projects";
+import { ProjectsSection } from "./projects";
 import { ServicesSection } from "./Services";
 import { ContactSection } from "./Contact";
 import { Footer } from "./Footer";
