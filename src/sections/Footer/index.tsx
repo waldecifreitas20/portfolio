@@ -23,14 +23,16 @@ export function Footer() {
               <a
                 key={`social-${i}`}
                 className=" rounded-full p-1 h-full overflow-clip hover:scale-125 transition-all duration-350"
-                href={social.iconSrc}
+                href={social.link}
                 target="_blank"
               >
                 <img className="size-full" src={social.iconSrc} alt="GitHub" />
               </a>
             );
           })}
-          <Mail size={30} className="text-white hover:scale-125 transition-all duration-350" />
+          <a href="mailto:freitas.wal18@gmail.com">
+            <Mail size={30} className="text-white hover:scale-125 transition-all duration-350" />
+          </a>
         </div>
 
 
@@ -45,7 +47,12 @@ export function Footer() {
           md:gap-8
           ">
           {menu.options.map((opt, i) => {
-            return <a key={`footer-opt-${i}`} className="hover:text-(--primary)" href={opt.refTo}>{opt.label}</a>
+            return (
+              <a
+                key={`footer-opt-${i}`}
+                className="hover:text-(--primary)"
+                href={opt.refTo}
+              >{opt.label}</a>)
           })}
         </nav>
 

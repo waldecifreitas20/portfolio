@@ -4,7 +4,7 @@
       "id": "",
       "name": "Portifolio",
       "previewUrl": "/mock/portfolio.png",
-      "category": "Portifolio",
+      "category": "Landing Page",
       "description": "Portfólio pessoal desenvolvido em React e tecnologias full-stack, apresentando meus projetos, habilidades e experiência com foco em performance, responsividade e design moderno.",
       "repository": "https://github.com/waldecifreitas20/portfolio-front-end  ",
       "deploy": "/",
@@ -191,7 +191,7 @@
       "previewUrl": "/mock/makeshop.png",
       "category": "E-commerce",
       "description": "Loja virtual focada em produtos voltados ao público feminino. Possui integração com Firebase",
-      "repository": "",
+      "repository": "https://github.com/waldecifreitas20/Makeshop",
       "deploy": "https://makeshop-store.vercel.app",
       "technologies":  [
         {
