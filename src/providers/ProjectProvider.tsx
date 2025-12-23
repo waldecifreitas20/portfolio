@@ -14,7 +14,9 @@ export function ProjectProvider(props: PropsWithChildren) {
   const [projects, setProjects] = useState<Array<Project>>([]);
 
   useEffect(() => {
-    Api.fetchProjects(setProjects);
+    Api.fetchProjects(data => {
+      setProjects(data);
+    });
   }, []);
 
 

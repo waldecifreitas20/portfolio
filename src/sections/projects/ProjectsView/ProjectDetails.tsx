@@ -19,9 +19,10 @@ interface ProjectDetailsProps {
 }
 
 export function ProjectDetails(props: ProjectDetailsProps) {
-  const { buttons, concepts } = useLanguage().content.projects;
+  const { content, activeLanguage } = useLanguage();
+  const { buttons, concepts } = content.projects;
   const { project } = props;
-
+  
   return (
     <div
       className=" 
@@ -36,16 +37,16 @@ export function ProjectDetails(props: ProjectDetailsProps) {
       >
         <MoveLeft /> {buttons.close}
       </button>
-      <ImageContainer src={project.previewUrl} />
+      <ImageContainer src={project.thumbnailUrl} />
       <p className="font-bold text-xl lg:text-2xl my-4">
         {project.name}
         <span className="w-10 mt-2 block border-b-3 border-(--primary)"></span>
       </p>
 
-      <p className="text-white/70">{project.description}</p>
+      <p className="text-white/70">{project.description[activeLanguage.label]}</p>
 
       <div className="my-4 pb-4 flex flex-col md:flex-row gap-2 md:gap-4 border-b border-white/5">
-        <a className="block w-full h-full" href={project.repository} target="_blank">
+        <a className="block w-full h-full" href={project.repositoryUrl} target="_blank">
           <Button style="flex justify-center gap-2 font-bold md:py-3" >
             <span className="h-6">
               <GithubIcon />
@@ -53,7 +54,7 @@ export function ProjectDetails(props: ProjectDetailsProps) {
             {buttons.repository}
           </Button>
         </a>
-        <a className="block w-full h-full" href={project.deploy} target="_blank">
+        <a className="block w-full h-full" href={project.deployUrl} target="_blank">
           <Button accent style="flex justify-center gap-2 font-bold md:py-3">
             <span className=" h-6">
               <ExternalLinkIcon />
@@ -76,13 +77,13 @@ export function ProjectDetails(props: ProjectDetailsProps) {
 
       <ColoredLabel isBackend textSize="text-lg">{concepts}</ColoredLabel>
       <div className="text-sm text-white/70">
-        {project.usedSkills
+        {project.skills
           .map((skill, i) => {
-            const isLastOne = project.usedSkills.length === (i + 1);
+            const isLastOne = project.skills.length === (i + 1);
 
             return <span
-              key={`skill?${skill.id}`}
-            >{skill.name}{!isLastOne && ", "}</span>;
+              key={`skill?${skill[activeLanguage.label]}`}
+            >{skill[activeLanguage.label]}{!isLastOne && ", "}</span>;
           })}
       </div>
 
