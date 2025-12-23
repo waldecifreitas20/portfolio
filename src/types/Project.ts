@@ -1,14 +1,19 @@
-import type { Skill } from "./Skill";
 import type { Technology } from "./Technology";
 
 export type Project = {
-  id: any,
-  name: string,
-  previewUrl: string,
+  id: number,
   category: string,
-  description: string,
-  repository: string,
-  deploy: string,
+  deployUrl: string,
+  name: string,
+  repositoryUrl: string,
+  thumbnailUrl: string,
   technologies: Array<Technology>,
-  usedSkills: Array<Skill>
+  skills: Array<{
+    en: string,
+    pt: string,
+  }>
+  description: {
+    en: string,
+    pt: string,
+  },
 }
