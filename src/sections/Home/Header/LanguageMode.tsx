@@ -4,18 +4,16 @@ import { useLanguage } from "@hooks/useLanguage";
 
 
 export function LanguageMode() {
-  const { activeLanguage, switchTo, flags, languages } = useLanguage();
-
+  const { getActiveLanguage, switchTo, flags, languages } = useLanguage();
   const activeClass = 'border-red-400';
 
   function handleClick(lang: Language) {
     switchTo(lang);
-
   }
 
   return (
     <div className="flex h-full gap-2 absolute z-0 right-0 top-0">
-      
+
       {/* portuguese */}
       <button
         onClick={() => handleClick(languages.pt)}>
@@ -25,9 +23,9 @@ export function LanguageMode() {
           border-2 
           h-10
           rounded-full 
-          ${activeLanguage === languages.pt ? activeClass : 'border-transparent'}`}
+          ${getActiveLanguage() === languages.pt ? activeClass : 'border-transparent'}`}
           src={flags.pt}
-          alt={activeLanguage}
+          alt={getActiveLanguage()}
         />
       </button>
 
@@ -40,9 +38,9 @@ export function LanguageMode() {
           border-2 
           h-10
           rounded-full 
-          ${activeLanguage === languages.en ? activeClass : 'border-transparent'}`}
+          ${getActiveLanguage() === languages.en ? activeClass : 'border-transparent'}`}
           src={flags.en}
-          alt={activeLanguage}
+          alt={getActiveLanguage()}
         />
       </button>
 

@@ -1,11 +1,11 @@
 import { createContext, useState, type PropsWithChildren } from "react";
 import ptContentJson from "@/data/pt_br.json";
 import enContentJson from "@/data/en.json";
-import type { LanguageLabel } from "@/types/Language";
+import type { Language } from "@/types/Language";
 import type { StaticContent } from "@/types/StaticContent";
 
 export const StaticContentContext = createContext({
-  load: (_languageLabel: LanguageLabel) => { },
+  load: (_Language: Language) => { },
   content: {} as StaticContent,
 });
 
@@ -17,10 +17,10 @@ const CONTENTS = {
 export function StaticContentProvider(props: PropsWithChildren) {
   const [content, setContent] = useState<StaticContent>(CONTENTS.pt);
 
-  function load(languageLabel: LanguageLabel) {
+  function load(Language: Language) {
     let selected = CONTENTS.pt;
 
-    if (languageLabel === 'en') {
+    if (Language === 'en') {
       selected = CONTENTS.en;
     }
     setContent(selected);
