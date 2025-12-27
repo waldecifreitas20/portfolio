@@ -1,6 +1,6 @@
-export type Language = {
-  label: LanguageLabel;
-  imgPath: string;
-}
+export type Language = "en" | "pt";
 
-export type LanguageLabel = "en" | "pt";
+export type LanguageFlag = {
+  "en": string;
+  "pt": string;
+};

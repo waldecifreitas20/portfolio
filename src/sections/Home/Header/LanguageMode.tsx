@@ -4,7 +4,7 @@ import { useLanguage } from "@hooks/useLanguage";
 
 
 export function LanguageMode() {
-  const { activeLanguage, switchTo, availableLanguages } = useLanguage();
+  const { activeLanguage, switchTo, flags, languages } = useLanguage();
 
   const activeClass = 'border-red-400';
 
@@ -15,24 +15,37 @@ export function LanguageMode() {
 
   return (
     <div className="flex h-full gap-2 absolute z-0 right-0 top-0">
-      {availableLanguages.map((lang, i) => {
-        return (
-          <button
-            key={`lang-${i}${lang.label}`}
-            onClick={() => handleClick(lang)}>
-            <img
-              className={`
-                block
-                border-2 
-                h-10
-                rounded-full 
-                ${activeLanguage.label === lang.label ? activeClass : 'border-transparent'}`}
-              src={lang.imgPath}
-              alt={lang.label}
-            />
-          </button>
-        );
-      })}
+      
+      {/* portuguese */}
+      <button
+        onClick={() => handleClick(languages.pt)}>
+        <img
+          className={`
+          block
+          border-2 
+          h-10
+          rounded-full 
+          ${activeLanguage === languages.pt ? activeClass : 'border-transparent'}`}
+          src={flags.pt}
+          alt={activeLanguage}
+        />
+      </button>
+
+      {/* english */}
+      <button
+        onClick={() => handleClick(languages.en)}>
+        <img
+          className={`
+          block
+          border-2 
+          h-10
+          rounded-full 
+          ${activeLanguage === languages.en ? activeClass : 'border-transparent'}`}
+          src={flags.en}
+          alt={activeLanguage}
+        />
+      </button>
+
     </div>
   );
 }

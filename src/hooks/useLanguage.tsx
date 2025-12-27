@@ -5,24 +5,30 @@ import ptFlag from "@assets/pt-flag.png";
 import enFlag from "@assets/en-flag.png";
 
 
-const languages = [
-  { label: 'pt', imgPath: ptFlag } as Language,
-  { label: 'en', imgPath: enFlag } as Language,
-]
+const LANGUAGES = {
+  en: 'en' as Language,
+  pt: 'pt' as Language,
+}
+const FLAGS = {
+  en: enFlag,
+  pt: ptFlag,
+}
+
 
 export function useLanguage() {
   const contentProvider = useContext(StaticContentContext);
-  const [activeLanguage, setActive] = useState<Language>(languages[0]);
+  const [activeLanguage, setActive] = useState<Language>(LANGUAGES.pt);
 
 
   function switchTo(lang: Language) {
     setActive(lang);
-    contentProvider.load(lang.label);
+    contentProvider.load(lang);
   }
 
 
   return {
-    availableLanguages: [...Object.values(languages)],
+    flags: { ...FLAGS },
+    languages: { ...LANGUAGES },
     content: contentProvider.content,
     activeLanguage,
     switchTo,

@@ -10,6 +10,7 @@ import { GithubIcon } from "@components/GitHubIcon";
 import { useLanguage } from "@hooks/useLanguage";
 
 import { TechSubsection } from "./TechSubSection";
+import { useEffect, useState } from "react";
 
 
 
@@ -22,7 +23,13 @@ export function ProjectDetails(props: ProjectDetailsProps) {
   const { content, activeLanguage } = useLanguage();
   const { buttons, concepts } = content.projects;
   const { project } = props;
-  
+  const [lang, setLang] = useState(activeLanguage);0
+
+  useEffect(() => {
+    setLang(activeLanguage);
+  }, [activeLanguage])
+
+
   return (
     <div
       className=" 
@@ -43,7 +50,7 @@ export function ProjectDetails(props: ProjectDetailsProps) {
         <span className="w-10 mt-2 block border-b-3 border-(--primary)"></span>
       </p>
 
-      <p className="text-white/70">{project.description[activeLanguage.label]}</p>
+      <p className="text-white/70">{project.description[lang]}</p>
 
       <div className="my-4 pb-4 flex flex-col md:flex-row gap-2 md:gap-4 border-b border-white/5">
         <a className="block w-full h-full" href={project.repositoryUrl} target="_blank">
@@ -82,8 +89,8 @@ export function ProjectDetails(props: ProjectDetailsProps) {
             const isLastOne = project.skills.length === (i + 1);
 
             return <span
-              key={`skill?${skill[activeLanguage.label]}`}
-            >{skill[activeLanguage.label]}{!isLastOne && ", "}</span>;
+              key={`skill?${skill[lang]}`}
+            >{skill[lang]}{!isLastOne && ", "}</span>;
           })}
       </div>
 
