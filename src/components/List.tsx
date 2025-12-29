@@ -21,7 +21,7 @@ export function List(props: ListProps) {
               key={itemKey}
               href={item[props.linkKeyname ?? ""] ?? ""}>
               {props.icon}
-              {item.name}
+              {item}
             </a>
           );
         }
@@ -29,7 +29,7 @@ export function List(props: ListProps) {
         return (
           <li className={classes} key={itemKey}>
             {props.icon}
-            {item.name}
+            {item}
           </li>
         );
       })}

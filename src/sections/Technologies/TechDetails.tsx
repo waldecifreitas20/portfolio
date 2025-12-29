@@ -6,13 +6,31 @@ import { ColoredLabel } from "@components/ColoredLabel";
 import { List } from "@components/List";
 import { Link } from "lucide-react";
 
+
 interface TechnologyDetailsProps {
   technology: Technology;
 }
 
 export function TechnologyDetails(props: TechnologyDetailsProps) {
-  const { projects } = useLanguage().content.tech.details;
-  const { getProjectsByTech  } = useContext(ProjectsContext);
+  const { content, getActiveLanguage } = useLanguage();
+  const { projects: projectSection, skills: skillsSection } = content.tech.details;
+
+  const { getProjectsByTech, } = useContext(ProjectsContext);
+  const projectsNames = getProjects();
+  const skills = getSkills();
+
+
+
+  function getSkills() {
+    const projects = getProjectsByTech(props.technology);
+    const _skills = [...new Set(projects.map(project => project.skills)).values()][0];
+    return _skills.map((skill: { pt: string, en: string }) => skill[getActiveLanguage()])
+  }
+
+  function getProjects() {
+    return getProjectsByTech(props.technology).map(project => project.name);
+  }
+
 
   return (
     <article
@@ -30,21 +48,35 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
 
       <p className="mb-2 text-sm">{props.technology.desc}</p>
 
-
-
       <div className="mt-4">
         <ColoredLabel
           isBackend={props.technology.isBackend}
           textSize="text-base">
-          {projects}
+          {skillsSection}
         </ColoredLabel>
         <List
-          items={getProjectsByTech(props.technology)}
+          items={skills}
           icon={<Link size={14} />}
           useLink
           linkKeyname="deploy"
         />
       </div>
+
+      <div className="mt-4">
+        <ColoredLabel
+          isBackend={props.technology.isBackend}
+          textSize="text-base">
+          {projectSection}
+        </ColoredLabel>
+        <List
+          items={projectsNames}
+          icon={<Link size={14} />}
+          useLink
+          linkKeyname="deploy"
+        />
+      </div>
+
+
 
     </article>
   );
