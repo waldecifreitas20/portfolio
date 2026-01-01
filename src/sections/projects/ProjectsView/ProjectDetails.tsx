@@ -10,6 +10,7 @@ import { GithubIcon } from "@components/GitHubIcon";
 import { useLanguage } from "@hooks/useLanguage";
 
 import { TechSubsection } from "./TechSubSection";
+import { useProjects } from "@/hooks/useProjects";
 
 
 
@@ -22,6 +23,8 @@ export function ProjectDetails(props: ProjectDetailsProps) {
   const { content, getActiveLanguage } = useLanguage();
   const { buttons, concepts } = content.projects;
   const { project } = props;
+  const { getSkills } = useProjects();
+  const projectSkills = getSkills(project);
 
   return (
     <div
@@ -77,14 +80,13 @@ export function ProjectDetails(props: ProjectDetailsProps) {
 
       <ColoredLabel isBackend textSize="text-lg">{concepts}</ColoredLabel>
       <div className="text-sm text-white/70">
-        {project.skills
-          .map((skill, i) => {
-            const isLastOne = project.skills.length === (i + 1);
+        {projectSkills.map((skill, i) => {
+          const isLastOne = projectSkills.length === (i + 1);
 
-            return <span
-              key={`skill?${skill[getActiveLanguage()]}`}
-            >{skill[getActiveLanguage()]}{!isLastOne && ", "}</span>;
-          })}
+          return <span
+            key={`skill?${skill[getActiveLanguage()]}`}
+          >{skill[getActiveLanguage()]}{!isLastOne && ", "}</span>;
+        })}
       </div>
 
     </div>
