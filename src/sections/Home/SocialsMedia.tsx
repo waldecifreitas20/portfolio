@@ -19,7 +19,7 @@ export function SocialsMedia() {
           <a
             key={`social-${i}`}
             className="size-full opacity-70 hover:opacity-100"
-            href={social.iconSrc}
+            href={social.link}
             target="_blank"
           >
             <img className="size-full" src={social.iconSrc} alt="GitHub" />
