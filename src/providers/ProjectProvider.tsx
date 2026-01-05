@@ -1,15 +1,12 @@
 import { createContext, useEffect, useState, type PropsWithChildren } from "react";
 import { Api } from "@/api/api";
 import type { Project } from "@/types/Project";
-import type { Technology } from "@/types/Technology";
-import type { DualLanguageField } from "../types/DualLanguageField";
 
 export const ProjectsContext = createContext({
   getProjects: () => [] as Array<Project>,
   getTotal: () => Number(0),
-  getProjectByTech: (_: Technology) => ({} as Project | undefined),
-  getProjectsByTech: (_: Technology) => ([] as Array<Project>),
-  getSkills: (_project: Project) => ([] as Array<DualLanguageField>),
+  getProjectByTech: (_id: number) => ({} as Project | undefined),
+  getProjectsByTech: (_id: number) => ([] as Array<Project>),
 });
 
 export function ProjectProvider(props: PropsWithChildren) {
@@ -30,33 +27,23 @@ export function ProjectProvider(props: PropsWithChildren) {
     return projects.length;
   }
 
-  function getProjectsByTech(tech: Technology) {
+  function getProjectsByTech(techId: number) {
     return projects.filter(project => {
       return project
-        .technologies
-        .some(technology => technology.name === tech.name);
+        .technologiesId
+        .some(id => id === techId);
     });
   }
 
-  function getProjectByTech(tech: Technology) {
+  function getProjectByTech(techId: number) {
     return projects.find(project => {
       return project
-        .technologies
-        .some(technology => technology.name === tech.name);
+        .technologiesId
+        .some(id => id === techId);
     });
   }
 
-  function getSkills(project: Project) {
-    const skillsSet = new Set<DualLanguageField>();
 
-    project.technologies.forEach(tech => {
-      tech.skills.forEach(skill => {
-        skillsSet.add(skill);
-      });
-    });
-
-    return Array.from(skillsSet);
-  }
 
 
   return (
@@ -65,7 +52,6 @@ export function ProjectProvider(props: PropsWithChildren) {
       getTotal,
       getProjectByTech,
       getProjectsByTech,
-      getSkills
     }}>
       {props.children}
     </ProjectsContext.Provider>

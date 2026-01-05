@@ -1,37 +1,23 @@
 import type { Project } from '@/types/Project';
 import { type Technology } from '@/types/Technology';
+import ProjectsJson from '@/data/projects.json';
+import TechsJson from '@/data/technologies.json';
 
 type ApiResponse<T> = (data: Array<T>) => void;
 
-function getBaseUrl() {
-  const {
-    DEV,
-    VITE_API_URL_DEV: devMode,
-    VITE_API_URL_PROD: prodMode
-  } = import.meta.env;
 
-  return DEV ? devMode : prodMode;
-}
-
-const ENDPOINTS = {
-  techs: '/technologies/all',
-  projects: '/projects/all'
-}
-
-
-async function api(path: string) {
-  return await fetch(`${getBaseUrl()}${path}`)
-    .then(res => res.json());
+function api<T>(json: any) {
+  return JSON.parse(JSON.stringify(json)) as { [key: string]: Array<T>; };
 }
 
 async function fetchTechnologies(callback: ApiResponse<Technology>) {
-  const data = await api(ENDPOINTS.techs);
-  callback(data.technologies);
+  const { technologies } = api<Technology>(TechsJson);
+  callback(technologies);
 }
 
 async function fetchProjects(callback: ApiResponse<Project>) {
-  const data = await api(ENDPOINTS.projects);
-  callback(data.projects);
+  const { projects } = api<Project>(ProjectsJson);
+  callback(projects);
 }
 
 

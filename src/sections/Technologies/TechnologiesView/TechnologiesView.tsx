@@ -19,14 +19,16 @@ export function TechnologiesView(props: TechnologiesViewProps) {
     frontend: [] as Array<Technology>,
   });
 
-
   useEffect(() => {
     Api
-      .fetchTechnologies(technologies => {
-        const backend = technologies.filter(tech => tech.isBackend);
-        const frontend = technologies.filter(tech => !tech.isBackend);
-
-        setTechs({ backend, frontend });
+      .fetchTechnologies((techs) => {
+        setTechs(old => {
+          return {
+            ...old,
+            frontend: techs.filter(tech => tech.isMainStack && tech.isFrontend),
+            backend: techs.filter(tech => tech.isMainStack && tech.isBackend),
+          }
+        });
       });
   }, []);
 

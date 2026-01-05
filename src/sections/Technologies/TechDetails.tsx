@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import type { Technology } from "@/types/Technology";
 import { useLanguage } from "@hooks/useLanguage";
 import { ProjectsContext } from "@providers/ProjectProvider";
 import { ColoredLabel } from "@components/ColoredLabel";
 import { List } from "@components/List";
 import { Link } from "lucide-react";
+import { Api } from "@/api/api";
 
 
 interface TechnologyDetailsProps {
@@ -15,32 +16,19 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
   const { content, getActiveLanguage } = useLanguage();
   const { projects: projectSection, skills: skillsSection } = content.tech.details;
 
-  const { getSkills, getProjectsByTech } = useContext(ProjectsContext);
+  const { getProjectsByTech } = useContext(ProjectsContext);
   const projectsNames = getProjects();
   const skills = getTechSkills();
 
-
-
   function getTechSkills() {
-    const ptSkills = new Set<string>();
-    const enSkills = new Set<string>();
-
-    getProjectsByTech(props.technology)
-      .forEach(project => {
-        getSkills(project).forEach(skill => {
-          ptSkills.add(skill.pt);
-          enSkills.add(skill.en);
-        });
-      });
-
     return {
-      pt: Array.from(ptSkills),
-      en: Array.from(enSkills),
+      pt: Array.from([]),
+      en: Array.from([]),
     }
   }
 
   function getProjects() {
-    return getProjectsByTech(props.technology).map(project => project.name);
+    return getProjectsByTech(1).map(project => project.name);
   }
 
 
@@ -58,7 +46,7 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
         <p>{props.technology.name}</p>
       </h3>
 
-      <p className="mb-2 text-sm">{props.technology.desc}</p>
+      <p className="mb-2 text-sm">{props.technology.description[getActiveLanguage()]}</p>
 
       <div className="mt-4">
         <ColoredLabel
