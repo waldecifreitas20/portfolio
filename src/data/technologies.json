@@ -1,0 +1,379 @@
+{
+  "technologies": [
+    {
+      "id": 1,
+      "name": "ReactJS",
+      "description": {
+        "en": "A JavaScript library for building user interfaces, maintained by Facebook and a community of developers.",
+        "pt": "Uma biblioteca JavaScript para construir interfaces de usuário, mantida pelo Facebook e uma comunidade de desenvolvedores."
+      },
+      "hexColor": "#1fa6cc",
+      "officialWebsite": "https://react.dev/",
+      "logoUrl": "src/assets/techs/react.svg",
+      "isBackend": false,
+      "isFrontend": true,
+      "skills": [
+        {
+          "en": "Component-Based Architecture",
+          "pt": "Arquitetura Baseada em Componentes"
+        },
+        {
+          "en": "JSX Syntax",
+          "pt": "Sintaxe JSX"
+        },
+        {
+          "en": "State Management",
+          "pt": "Gerenciamento de Estados"
+        },
+        {
+          "en": "Hooks",
+          "pt": "Hooks"
+        },
+        {
+          "en": "Virtual DOM",
+          "pt": "DOM Virtual"
+        }
+      ], 
+      "isMainStack": true
+    },
+    {
+      "id": 2,
+      "name": "Typescript",
+      "description": {
+        "en": "TypeScript is a high-level programming language that adds static typing with optional type annotations to JavaScript.",
+        "pt": "TypeScript é uma linguagem de programação de alto nível que adiciona tipagem estática com anotações de tipo opcionais ao JavaScript."
+      },
+      "isBackend": true,
+      "isFrontend": true,
+      "hexColor": "#0c64cf",
+      "isMainStack": true,
+      "officialWebsite": "https://www.typescriptlang.org/",
+      "logoUrl": "src/assets/techs/ts-logo.png",
+      "skills": [
+        {
+          "en": "Static Typing",
+          "pt": "Tipagem Estática"
+        },
+        {
+          "en": "Interfaces and Types",
+          "pt": "Interfaces e Tipos"
+        },
+        {
+          "en": "Decorators",
+          "pt": "Decoradores"
+        },
+        {
+          "en": "Type Inference",
+          "pt": "Inferência de Tipos"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Javascript",
+      "description" : {
+        "en": "JavaScript is a versatile programming language primarily used for web development to create interactive and dynamic user experiences.",
+        "pt": "JavaScript é uma linguagem de programação versátil, usada principalmente para desenvolvimento web, para criar experiências de usuário interativas e dinâmicas."
+      },
+      "officialWebsite": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "logoUrl": "src/assets/techs/js-logo.png",
+      "isBackend": true,
+      "isFrontend": true,
+      "skills":[
+        {
+          "en": "Dynamic Typing",
+          "pt": "Tipagem Dinâmica"
+        },
+        {
+          "en": "Asynchronous Programming",
+          "pt": "Programação Assíncrona"
+        },
+        {
+          "en": "Event-Driven Programming",
+          "pt": "Programação Orientada a Eventos"
+        }
+
+      ],
+      "hexColor": "#cfbc0c",
+      "isMainStack": true
+    },
+    {
+      "id": 4,
+      "name": "TailwindCss",
+      "description": {
+        "en": "A utility-first CSS framework for rapidly building custom user interfaces.",
+        "pt": "Um framework CSS utilitário para construir rapidamente interfaces de usuário personalizadas."
+      },
+      "officialWebsite": "https://tailwindcss.com/",
+      "logoUrl": "src/assets/techs/tailwind-logo.png",
+      "skills":[
+        {
+          "en": "Utility-First Approach",
+          "pt": "Abordagem Utilitário-Primeiro"
+        },
+        {
+          "en": "Responsive Design",
+          "pt": "Design Responsivo"
+        },
+        {
+          "en": "Customizable Themes",
+          "pt": "Temas Personalizáveis"
+        }
+      ],
+      "isBackend": false,
+      "isFrontend": true,
+      "hexColor": "#0dc7db",
+      "isMainStack": true
+    },
+    {
+      "id": 5,
+      "name": "Prisma",
+      "description":{
+        "en": "An open-source ORM (Object-Relational Mapping) tool that simplifies database access and management for TypeScript and JavaScript applications.",
+        "pt": "Uma ferramenta ORM (Mapeamento Objeto-Relacional) de código aberto que simplifica o acesso e o gerenciamento de bancos de dados para aplicações TypeScript e JavaScript."
+      },
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#0b6b75",
+      "logoUrl": "src/assets/techs/prisma-logo.png",
+      "skills": [
+        {
+          "en": "Type-Safe Database Queries",
+          "pt": "Consultas de Banco de Dados com Segurança de Tipos"
+        },
+        {
+          "en": "Schema Modeling",
+          "pt": "Modelagem de Esquema"
+        },
+        {
+          "en": "Migration Management",
+          "pt": "Gerenciamento de Migrações"
+        },
+        {
+          "en": "Data Modeling",
+          "pt": "Modelagem de Dados"
+        },
+        {
+          "en": "Query Optimization",
+          "pt": "Otimização de Consultas"
+        }
+      ],
+      "officialWebsite": "https://www.prisma.io/",
+      "isMainStack": true
+    },
+    {
+      "id": 6,
+      "name": "NodeJS",
+      "description":{
+        "en": "A JavaScript runtime built on Chrome's V8 JavaScript engine that allows developers to run JavaScript on the server-side.",
+        "pt": "Um ambiente de execução JavaScript construído sobre o motor V8 do Chrome que permite aos desenvolvedores executar JavaScript no lado do servidor."
+      },
+      "skills": [
+        {
+          "en": "Event-Driven Architecture",
+          "pt": "Arquitetura Orientada a Eventos"
+        },
+        {
+          "en": "Non-Blocking I/O",
+          "pt": "I/O Não Bloqueante"
+        },
+        {
+          "en": "Package Management with npm",
+          "pt": "Gerenciamento de Pacotes com npm"
+        },
+        {
+          "en": "Scalability",
+          "pt": "Escalabilidade"
+        }
+      ],
+      "officialWebsite": "https://nodejs.org/",
+      "logoUrl": "src/assets/techs/node-logo.png",
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#1d823b",
+      "isMainStack": true
+    },
+    {
+      "id": 7,
+      "name": "ExpressJS",
+      "logoUrl": "src/assets/techs/express-logo.png",
+      "description":{
+        "en": "A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.",
+        "pt": "Um framework de aplicação web minimalista e flexível para Node.js que fornece um conjunto robusto de recursos para construir aplicações web e móveis."
+      },
+      "officialWebsite": "https://expressjs.com/",
+      "skills":[
+        {
+          "en": "Routing",
+          "pt": "Roteamento"
+        },
+        {
+          "en": "Middleware Support",
+          "pt": "Suporte a Middleware"
+        },
+        {
+          "en": "Template Engines",
+          "pt": "Motores de Template"
+        },
+        {
+          "en": "RESTful API Development",
+          "pt": "Desenvolvimento de API RESTful"
+        }
+      ],
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#ced1cb",
+      "isMainStack": true
+    },
+    {
+      "id": 8,
+      "name": "PostgreSQL",
+      "logoUrl": "src/assets/techs/postgresql-logo.png", 
+      "description":{
+        "en": "An open-source relational database management system (RDBMS) known for its robustness, scalability, and support for advanced data types and performance optimization features.",
+        "pt": "Um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto conhecido por sua robustez, escalabilidade e suporte a tipos de dados avançados e recursos de otimização de desempenho."
+      },
+      "officialWebsite": "https://www.postgresql.org/",
+      "skills": [
+        {
+          "en": "Advanced Data Types",
+          "pt": "Tipos de Dados Avançados"
+        },
+        {
+          "en": "Indexing and Query Optimization",
+          "pt": "Indexação e Otimização de Consultas"
+        },
+        {
+          "en": "Replication and High Availability",
+          "pt": "Replicação e Alta Disponibilidade"
+        }
+      ],
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#204680",
+      "isMainStack": true
+    },
+    {
+      "id": 9,
+      "name": "SQLite",
+      "description": {
+        "en": "A lightweight, serverless, self-contained SQL database engine that is widely used for embedded applications and small-scale projects.",
+        "pt": "Banco de dados SQL leve, sem servidor e autocontido, amplamente utilizado para aplicações embarcadas e projetos de pequena escala."
+      },
+      "skills": [
+        {
+          "en": "Lightweight and Fast",
+          "pt": "Leve e Rápido"
+        },
+        {
+          "en": "Serverless Architecture",
+          "pt": "Arquitetura Sem Servidor"
+        },
+        {
+          "en": "Cross-Platform Compatibility",
+          "pt": "Compatibilidade Multiplataforma"
+        }
+      ],
+      "officialWebsite": "https://www.sqlite.org/",
+      "logoUrl": "Sqlite",
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#0a4ead",
+      "isMainStack": false
+    },
+    {
+      "id": 10,
+      "name": "MySql",
+      "description":{
+        "en": "An open-source relational database management system (RDBMS) known for its reliability, ease of use, and performance in handling large-scale applications.",
+        "pt": "Um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto conhecido por sua confiabilidade, facilidade de uso e desempenho no manuseio de aplicações em grande escala."
+      },
+      "logoUrl": "mysql",
+      "officialWebsite": "https://www.mysql.com/",
+      "skills": [
+        {
+          "en": "Data Security",
+          "pt": "Segurança de Dados"
+        },
+        {
+          "en": "Scalability",
+          "pt": "Escalabilidade"
+        },
+        {
+          "en": "Replication",
+          "pt": "Replicação"
+        }
+      ],
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#e89510",
+      "isMainStack": false
+    },
+    {
+      "id": 11,
+      "name": "NestJs",
+      "description":{
+        "en": "A progressive Node.js framework for building efficient, reliable, and scalable server-side applications using TypeScript.",
+        "pt": "Um framework progressivo para Node.js para construir aplicações do lado do servidor eficientes, confiáveis e escaláveis usando TypeScript."
+      },
+      "logoUrl":"nestjs",
+      "officialWebsite": "https://nestjs.com/",
+      "skills":[
+        {
+          "en": "Modular Architecture",
+          "pt": "Arquitetura Modular"
+        },
+        {
+          "en": "Dependency Injection",
+          "pt": "Injeção de Dependência"
+        },
+        {
+          "en": "Middleware and Interceptors",
+          "pt": "Middleware e Interceptadores"
+        },
+        {
+          "en": "GraphQL Support",
+          "pt": "Suporte a GraphQL"
+        }
+      ],
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#e81043",
+      "isMainStack": false
+    },
+    {
+      "id": 12,
+      "name": "Firebase",
+      "description":{
+        "en": "A cross-platform development platform created by Google that provides database, authentication, hosting, and cloud functions services to facilitate the creation and management of web and mobile applications.",
+        "pt": "Plataforma de desenvolvimento multiplataforma criada pelo Google que fornece serviços de banco de dados, autenticação, hospedagem e funções em nuvem para facilitar a criação e o gerenciamento de aplicativos web e móveis."
+      },
+
+      "logoUrl":"firebase",
+      "officialWebsite": "https://firebase.google.com/",
+      "skills":[
+        {
+          "en": "Real-time Database",
+          "pt": "Banco de Dados em Tempo Real"
+        },
+        {
+          "en": "Authentication",
+          "pt": "Autenticação"
+        },
+        {
+          "en": "Cloud Functions",
+          "pt": "Funções em Nuvem"
+        },
+        {
+          "en": "Hosting",
+          "pt": "Hospedagem"
+        }
+      ],
+      "isBackend": true,
+      "isFrontend": false,
+      "hexColor": "#e39505",
+      "isMainStack": false
+    }
+    
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Meu Portifolio",
+      "category": {
+        "en": "Portfolio",
+        "pt": "Portifólio"
+      },
+      "deployUrl": "https://waldecifreitas.vercel.app",
+      "repositoryUrl": "https://github.com/waldecifreitas20/portfolio",
+      "thumbnailUrl": "src/assets/projects/portfolio.png",
+      "description": {
+        "en": "My personal portfolio website showcasing my projects and skills, built with ReactJS, TypeScript, and TailwindCSS. It features a clean and modern design, responsive layout, and smooth animations to provide an engaging user experience.",
+        "pt": "Meu site pessoal de portfólio que exibe meus projetos e habilidades, construído com ReactJS, TypeScript e TailwindCSS. Apresenta um design limpo e moderno, layout responsivo e animações suaves para proporcionar uma experiência envolvente ao usuário."
+      },
+      "technologiesId": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11
+      ],
+      "concepts": [
+        {
+          "en": "Responsive Design",
+          "pt": "Design Responsivo"
+        },
+        {
+          "en": "Modern UI/UX",
+          "pt": "UI/UX Moderna"
+        },
+        {
+          "en": "Type Safety with TypeScript",
+          "pt": "Segurança de Tipos com TypeScript"
+        },
+        {
+          "en": "Backend Integration",
+          "pt": "Integração com Backend"
+        },
+        {
+          "en": "Database Management",
+          "pt": "Gerenciamento de Banco de Dados"
+        },
+        {
+          "en": "API Development",
+          "pt": "Desenvolvimento de API"
+        },
+        {
+          "en": "Version Control with Git",
+          "pt": "Controle de Versão com Git"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Makeshop",
+      "category": {
+        "pt": "Loja Virtual", 
+        "en": "E-commerce"
+      },
+      "deployUrl": "https://makeshop-store.vercel.app",
+      "repositoryUrl": "https://github.com/waldecifreitas20/makeshop",
+      "thumbnailUrl": "src/assets/projects/makeshop.png",
+      "description": {
+        "en": "Webstore for a fictional company called Makeshop, built with ReactJS, TypeScript, and TailwindCSS. It features a user-friendly interface, product catalog, shopping cart, and mocked checkout process.",
+        "pt": "Loja virtual para uma empresa fictícia chamada Makeshop, construída com ReactJS, TypeScript e TailwindCSS. Apresenta uma interface amigável, catálogo de produtos, carrinho de compras e processo de checkout simulado."
+      },
+      "technologiesId": [
+        1,
+        2,
+        3,
+        4,
+        12
+      ],
+      "concepts": [
+        {
+          "en": "Responsive Design",
+          "pt": "Design Responsivo"
+        },
+        {
+          "en": "Type Safety with TypeScript",
+          "pt": "Segurança de Tipos com TypeScript"
+        },
+       {
+          "en": "State Management",
+          "pt": "Gerenciamento de Estado"
+       },
+        {
+          "en": "Shopping Cart",
+          "pt": "Carrinho de compras"
+        },
+        {
+          "en": "Mocked Checkout Process",
+          "pt": "Processo de checkout simulado"
+        },
+        {
+          "en": "User Authentication",
+          "pt": "Autenticação de Usuário"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "name": "Tasky",
+      "category": {
+        "pt": "Gerenciador", 
+        "en": "Manager"
+      },
+      "deployUrl": "https://taskymg.vercel.app",
+      "repositoryUrl": "https://github.com/waldecifreitas20/tasky-client",
+      "thumbnailUrl": "src/assets/projects/tasky.png",
+      "description": {
+        "en": "Tasky is a task management application that helps users organize their everyday-tasks. Built with ReactJS, TypeScript, and TailwindCSS for the frontend, and Node.js with Express and PostgreSQL for the backend, Tasky offers a seamless user experience with features like task creation, editing, deletion and updating, along with a robust authentication system using Google account.",
+        "pt": "Tasky é um aplicativo de gerenciamento de tarefas que ajuda os usuários a organizar suas tarefas diárias. Construído com ReactJS, TypeScript e TailwindCSS para o frontend, e Node.js com Express e PostgreSQL para o backend, o Tasky oferece uma experiência de usuário perfeita com recursos como criação, edição, exclusão e atualização de tarefas, com um sistema de autenticação robusto de conta Google."
+      },
+      "technologiesId": [
+        1, 2, 3, 4, 6, 7, 8
+      ],
+      "concepts": [
+        {
+          "en": "User Authentication with Google",
+          "pt": "Autenticação de Usuário com Google"
+        },
+        {
+          "en": "CRUD Operations",
+          "pt": "Operações CRUD"
+        },
+        {
+          "en": "Backend Integration",
+          "pt": "Integração com Backend"
+        },
+        {
+          "en": "Database Management",
+          "pt": "Gerenciamento de Banco de Dados"
+        },
+        {
+          "en": "API Development",
+          "pt": "Desenvolvimento de API"
+        }
+      ]
+    }
+  ]
+}

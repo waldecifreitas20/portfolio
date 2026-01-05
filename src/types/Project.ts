@@ -1,13 +1,13 @@
 import type { DualLanguageField } from "./DualLanguageField";
-import type { Technology } from "./Technology";
 
 export type Project = {
   id: number,
-  category: string,
-  deployUrl: string,
   name: string,
+  category: DualLanguageField,
+  deployUrl: string,
   repositoryUrl: string,
   thumbnailUrl: string,
-  technologies: Array<Technology>,
+  technologiesId: Array<number>,
   description: DualLanguageField,
+  concepts: Array<DualLanguageField>,
 }

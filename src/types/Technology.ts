@@ -3,14 +3,14 @@ import type { DualLanguageField } from "./DualLanguageField"
 export type Technology = {
   id: string,
   name: string,
-  desc: string,
-  desc_en: string,
+  description: DualLanguageField,
   hexColor: string,
   officialWebsite: string,
   logoUrl: string,
   isBackend: boolean,
   isFrontend: boolean,
-  skills: Array<DualLanguageField>
+  skills: Array<DualLanguageField>,
+  isMainStack: boolean,
 }
 
 
