@@ -5,7 +5,6 @@ import { ProjectsContext } from "@providers/ProjectProvider";
 import { ColoredLabel } from "@components/ColoredLabel";
 import { List } from "@components/List";
 import { Link } from "lucide-react";
-import { Api } from "@/api/api";
 
 
 interface TechnologyDetailsProps {
@@ -18,14 +17,10 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
 
   const { getProjectsByTech } = useContext(ProjectsContext);
   const projectsNames = getProjects();
-  const skills = getTechSkills();
-
-  function getTechSkills() {
-    return {
-      pt: Array.from([]),
-      en: Array.from([]),
-    }
-  }
+  const skills = {
+    pt: props.technology.skills.map(skill => skill.pt),
+    en: props.technology.skills.map(skill => skill.en),
+  };
 
   function getProjects() {
     return getProjectsByTech(1).map(project => project.name);
@@ -50,29 +45,25 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
 
       <div className="mt-4">
         <ColoredLabel
-          isBackend={props.technology.isBackend}
+          isBackend={props.technology.isBackend && !props.technology.isFrontend}
           textSize="text-base">
           {skillsSection}
         </ColoredLabel>
         <List
           items={skills[getActiveLanguage()]}
           icon={<Link size={14} />}
-          useLink
-          linkKeyname="deploy"
         />
       </div>
 
       <div className="mt-4">
         <ColoredLabel
-          isBackend={props.technology.isBackend}
+          isBackend={props.technology.isBackend && !props.technology.isFrontend}
           textSize="text-base">
           {projectSection}
         </ColoredLabel>
         <List
           items={projectsNames}
           icon={<Link size={14} />}
-          useLink
-          linkKeyname="deploy"
         />
       </div>
 

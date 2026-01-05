@@ -1,7 +1,7 @@
 import type { DualLanguageField } from "./DualLanguageField"
 
 export type Technology = {
-  id: string,
+  id: number,
   name: string,
   description: DualLanguageField,
   hexColor: string,

@@ -2,8 +2,6 @@ import { useRef, type ReactElement } from "react";
 interface ListProps {
   items: Array<any>,
   icon?: ReactElement,
-  useLink?: boolean;
-  linkKeyname?: string;
 }
 
 export function List(props: ListProps) {
@@ -13,18 +11,6 @@ export function List(props: ListProps) {
       {props.items.map((item, i) => {
         const classes = "flex items-center gap-1";
         const itemKey = `list$${listId.current}-item$${i}`;
-
-        if (props.useLink) {
-          return (
-            <a
-              className={classes}
-              key={itemKey}
-              href={item[props.linkKeyname ?? ""] ?? ""}>
-              {props.icon}
-              {item}
-            </a>
-          );
-        }
 
         return (
           <li className={classes} key={itemKey}>

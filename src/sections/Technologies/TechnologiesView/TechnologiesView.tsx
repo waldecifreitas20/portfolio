@@ -67,6 +67,7 @@ export function TechnologiesView(props: TechnologiesViewProps) {
               key={`tech-${tech.id}`}
               tech={tech}
               onClick={props.onSelectedTech}
+              isBackend={activeTab === tabs.backend}
             />
           );
         })}

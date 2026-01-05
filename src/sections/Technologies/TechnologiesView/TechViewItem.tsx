@@ -5,6 +5,7 @@ import { ProjectsContext } from "@providers/ProjectProvider";
 
 interface TechViewItemProps {
   tech: Technology,
+  isBackend: boolean,
   onClick: (tech: Technology) => void;
 }
 
@@ -16,13 +17,13 @@ export function TechViewItem(props: TechViewItemProps) {
 
   function calculatePercentOfUse() {
     const totalProjects = projectProvider.getTotal();
-    const appearances = projectProvider.getProjectsByTech(tech).length;
+    const appearances = projectProvider.getProjectsByTech(tech.id).length;
 
     return Math.round(appearances / totalProjects * 100);
   }
 
   function getThemeColor() {
-    return tech.isBackend ? 'var(--primary)' : 'var(--accent)';
+    return props.isBackend ? 'var(--primary)' : 'var(--accent)';
   }
 
   return (
