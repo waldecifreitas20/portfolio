@@ -17,7 +17,9 @@ async function fetchTechnologies(callback: ApiResponse<Technology>) {
 
 async function fetchProjects(callback: ApiResponse<Project>) {
   const { projects } = api<Project>(ProjectsJson);
-  callback([]);
+  console.log(projects);
+  
+  callback(projects);
 }
 
 

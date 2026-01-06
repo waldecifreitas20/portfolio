@@ -10,7 +10,8 @@ import { GithubIcon } from "@components/GitHubIcon";
 import { useLanguage } from "@hooks/useLanguage";
 
 import { TechSubsection } from "./TechSubSection";
-import { useProjects } from "@/hooks/useProjects";
+import { useTechnology } from "@/hooks/useTechology";
+import type { Technology } from "@/types/Technology";
 
 
 
@@ -23,8 +24,17 @@ export function ProjectDetails(props: ProjectDetailsProps) {
   const { content, getActiveLanguage } = useLanguage();
   const { buttons, concepts } = content.projects;
   const { project } = props;
-  const { getSkills } = useProjects();
-  const projectSkills = getSkills(project);
+  const { getTechnologyById } = useTechnology();
+
+  const techs = {
+    frontend: project.technologiesId.map(techId => {
+      return getTechnologyById(techId);
+    }) as Array<Technology>,
+
+    backend: project.technologiesId.map(techId => {
+      return getTechnologyById(techId);
+    }) as Array<Technology>,
+  }
 
   return (
     <div
@@ -69,19 +79,19 @@ export function ProjectDetails(props: ProjectDetailsProps) {
 
 
       <TechSubsection
-        techs={project.technologies}
+        techs={techs.frontend}
         title="Front-end"
       />
       <TechSubsection
-        techs={project.technologies}
+        techs={techs.backend}
         title="Back-end"
         isBackend
       />
 
       <ColoredLabel isBackend textSize="text-lg">{concepts}</ColoredLabel>
       <div className="text-sm text-white/70">
-        {projectSkills.map((skill, i) => {
-          const isLastOne = projectSkills.length === (i + 1);
+        {props.project.concepts.map((skill, i) => {
+          const isLastOne = props.project.concepts.length === (i + 1);
 
           return <span
             key={`skill?${skill[getActiveLanguage()]}`}

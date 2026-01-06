@@ -14,10 +14,10 @@ export function TechSubsection(props: TechSubsectionProps) {
       <ul className="flex gap-1 mt-2">{
         props
           .techs
-          .filter(tech => props.isBackend ? tech.isBackend : !tech.isBackend)
+          .filter(tech => props.isBackend === tech.isBackend)
           .map(tech => {
             return <p
-              className="
+              className=" 
               py-1 px-3 
               text-sm 
               bg-[#282328] 

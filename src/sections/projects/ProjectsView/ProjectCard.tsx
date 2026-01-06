@@ -14,7 +14,9 @@ interface ProjectCardProps {
 
 
 export function ProjectCard(props: ProjectCardProps) {
-  const { details } = useLanguage().content.projects.buttons;
+  const { content, getActiveLanguage } = useLanguage();
+  const { details } = content.projects.buttons;
+
   const { project, onClickSeeMore } = props;
 
   function handleClick() {
@@ -47,7 +49,7 @@ export function ProjectCard(props: ProjectCardProps) {
 
       <div className="flex mt-4 text-white justify-between">
         <span>
-          <p className="text-sm">{project.category}</p>
+          <p className="text-sm">{project.category[getActiveLanguage()]}</p>
           <p className="font-bold">{project.name}</p>
         </span>
 
