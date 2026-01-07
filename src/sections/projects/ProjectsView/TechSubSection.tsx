@@ -8,23 +8,29 @@ interface TechSubsectionProps {
 }
 
 export function TechSubsection(props: TechSubsectionProps) {
+  console.log(props.techs);
+
+
   return (
-    <div className="my-4">
+    <div className="my-4 ">
       <ColoredLabel textSize="text-lg" isBackend={props.isBackend}>{props.title}</ColoredLabel>
-      <ul className="flex gap-1 mt-2">{
-        props
-          .techs
-          .filter(tech => props.isBackend === tech.isBackend)
+
+      <ul className="w-full flex flex-wrap gap-1 mt-2">{
+        props.techs
           .map(tech => {
             return <p
               className=" 
               py-1 px-3 
               text-sm 
               bg-[#282328] 
+              
               border border-white/10 
               w-fit rounded-md
               "
-              style={{ color: tech.hexColor }}>{tech.name}</p>;
+              style={{ 
+                borderColor: tech.hexColor,
+                color: tech.hexColor
+              }}>{tech.name}</p>;
           })
       }</ul>
     </div>

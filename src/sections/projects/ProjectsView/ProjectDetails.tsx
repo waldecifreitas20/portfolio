@@ -10,8 +10,9 @@ import { GithubIcon } from "@components/GitHubIcon";
 import { useLanguage } from "@hooks/useLanguage";
 
 import { TechSubsection } from "./TechSubSection";
-import { useTechnology } from "@/hooks/useTechology";
 import type { Technology } from "@/types/Technology";
+import { useContext, } from "react";
+import { TechnologyContext } from "@/providers/TechnologyProvider";
 
 
 
@@ -24,16 +25,27 @@ export function ProjectDetails(props: ProjectDetailsProps) {
   const { content, getActiveLanguage } = useLanguage();
   const { buttons, concepts } = content.projects;
   const { project } = props;
-  const { getTechnologyById } = useTechnology();
+  const { getTechnologyById } = useContext(TechnologyContext);
+
 
   const techs = {
-    frontend: project.technologiesId.map(techId => {
-      return getTechnologyById(techId);
-    }) as Array<Technology>,
+    frontend: getTechs(false) as Technology[],
+    backend: getTechs(true) as Technology[],
+  }
 
-    backend: project.technologiesId.map(techId => {
-      return getTechnologyById(techId);
-    }) as Array<Technology>,
+  function getTechs(isBackend: boolean) {
+    const technologies: Array<Technology> = [];
+
+    project.technologiesId.forEach(techId => {
+      const tech = getTechnologyById(techId);
+      const isAccepted = (isBackend == tech.isBackend) || (!isBackend && tech.isFrontend);
+
+      if (isAccepted) {
+        technologies.push(tech);
+      }
+    });
+
+    return technologies;
   }
 
   return (
@@ -42,6 +54,7 @@ export function ProjectDetails(props: ProjectDetailsProps) {
       text-white 
       px-4 pb-4 md:px-6 md:pb-6
       bg-[#140F14]
+      
       w-full 
       border border-(--primary) rounded-lg">
       <button

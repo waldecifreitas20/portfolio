@@ -5,14 +5,17 @@ import App from './App.tsx'
 import { StaticContentProvider } from './providers/StaticContentProvider.tsx'
 import { ProjectProvider } from './providers/ProjectProvider.tsx'
 import { LanguageProvider } from './providers/LanguageProvider.tsx'
+import { TechnologyProvider } from './providers/TechnologyProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <LanguageProvider>
       <StaticContentProvider>
-        <ProjectProvider>
-          <App />
-        </ProjectProvider>
+        <TechnologyProvider>
+          <ProjectProvider>
+            <App />
+          </ProjectProvider>
+        </TechnologyProvider>
       </StaticContentProvider>
     </LanguageProvider>
   </StrictMode>,
