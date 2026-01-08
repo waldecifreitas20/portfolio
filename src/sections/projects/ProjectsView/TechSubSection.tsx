@@ -8,8 +8,6 @@ interface TechSubsectionProps {
 }
 
 export function TechSubsection(props: TechSubsectionProps) {
-  console.log(props.techs);
-
 
   return (
     <div className="my-4 ">
