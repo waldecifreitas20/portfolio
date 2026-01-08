@@ -7,6 +7,7 @@ import type { Project } from "@/types/Project";
 import { AnimatedButton } from "@components/AnimatedButton";
 import { Card } from "@components/Card";
 
+
 interface ProjectCardProps {
   project: Project;
   onClickSeeMore: (project: Project) => void;
@@ -19,9 +20,12 @@ export function ProjectCard(props: ProjectCardProps) {
 
   const { project, onClickSeeMore } = props;
 
+
   function handleClick() {
     onClickSeeMore(project);
   }
+
+
 
   return (
     <Card enableHover style={`relative z-0  group/card`}>
@@ -33,7 +37,11 @@ export function ProjectCard(props: ProjectCardProps) {
         relative rounded-lg 
         block overflow-hidden
         ">
-        <img className="object-cover block min-h-50" src={project.thumbnailUrl} alt={project.name} />
+        <img
+          className="object-cover block min-h-50"
+          src={props.project.thumbnailUrl}
+          alt={project.name}
+        />
         <div
           className="
           size-full 

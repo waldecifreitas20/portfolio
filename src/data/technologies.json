@@ -9,7 +9,7 @@
       },
       "hexColor": "#1fa6cc",
       "officialWebsite": "https://react.dev/",
-      "logoUrl": "src/assets/techs/react.svg",
+      "logoUrl": "/techs/react.svg",
       "isBackend": false,
       "isFrontend": true,
       "skills": [
@@ -48,7 +48,7 @@
       "hexColor": "#0c64cf",
       "isMainStack": true,
       "officialWebsite": "https://www.typescriptlang.org/",
-      "logoUrl": "src/assets/techs/ts-logo.png",
+      "logoUrl": "/techs/ts-logo.png",
       "skills": [
         {
           "en": "Static Typing",
@@ -76,7 +76,7 @@
         "pt": "JavaScript é uma linguagem de programação versátil, usada principalmente para desenvolvimento web, para criar experiências de usuário interativas e dinâmicas."
       },
       "officialWebsite": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      "logoUrl": "src/assets/techs/js-logo.svg",
+      "logoUrl": "/techs/js-logo.svg",
       "isBackend": true,
       "isFrontend": true,
       "skills":[
@@ -105,7 +105,7 @@
         "pt": "Um framework CSS utilitário para construir rapidamente interfaces de usuário personalizadas."
       },
       "officialWebsite": "https://tailwindcss.com/",
-      "logoUrl": "src/assets/techs/tailwind-logo.svg",
+      "logoUrl": "/techs/tailwind-logo.svg",
       "skills":[
         {
           "en": "Utility-First Approach",
@@ -135,7 +135,7 @@
       "isBackend": true,
       "isFrontend": false,
       "hexColor": "#0b6b75",
-      "logoUrl": "src/assets/techs/prisma-logo.svg",
+      "logoUrl": "/techs/prisma-logo.svg",
       "skills": [
         {
           "en": "Type-Safe Database Queries",
@@ -187,7 +187,7 @@
         }
       ],
       "officialWebsite": "https://nodejs.org/",
-      "logoUrl": "src/assets/techs/node-logo.svg",
+      "logoUrl": "/techs/node-logo.svg",
       "isBackend": true,
       "isFrontend": false,
       "hexColor": "#1d823b",
@@ -196,7 +196,7 @@
     {
       "id": 7,
       "name": "ExpressJS",
-      "logoUrl": "src/assets/techs/express-logo.png",
+      "logoUrl": "/techs/express-logo.png",
       "description":{
         "en": "A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.",
         "pt": "Um framework de aplicação web minimalista e flexível para Node.js que fornece um conjunto robusto de recursos para construir aplicações web e móveis."
@@ -228,7 +228,7 @@
     {
       "id": 8,
       "name": "PostgreSQL",
-      "logoUrl": "src/assets/techs/postgresql-logo.svg", 
+      "logoUrl": "/techs/postgresql-logo.svg", 
       "description":{
         "en": "An open-source relational database management system (RDBMS) known for its robustness, scalability, and support for advanced data types and performance optimization features.",
         "pt": "Um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto conhecido por sua robustez, escalabilidade e suporte a tipos de dados avançados e recursos de otimização de desempenho."
