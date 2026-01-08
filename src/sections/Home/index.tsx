@@ -7,6 +7,8 @@ import heroBanner from "@assets/hero-laptop.png";
 import { HeroText } from "./HeroText";
 import { Header } from "./Header";
 
+import { motion } from "motion/react";
+
 export function HomeSection() {
   return (
     <section
@@ -21,7 +23,14 @@ export function HomeSection() {
 
         <div className="flex items-center lg:mt-20">
           <HeroText />
-          <img className="hidden lg:block w-1/2 h-full" src={heroBanner} alt="banner" />
+
+          <motion.img
+            className="hidden lg:block w-1/2 h-full"
+            src={heroBanner}
+            alt="banner"
+            animate={{ y: [-2, 0, -2] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
         </div>
       </ContentArea>
     </section>
