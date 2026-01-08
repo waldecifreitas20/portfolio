@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import type { Technology } from "@/types/Technology";
 import { useLanguage } from "@hooks/useLanguage";
 import { ProjectsContext } from "@providers/ProjectProvider";
