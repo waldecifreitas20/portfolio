@@ -29,22 +29,23 @@ export function ProjectProvider(props: PropsWithChildren) {
 
   function getProjectsByTech(techId: number) {
     return projects.filter(project => {
-      return project
-        .technologiesId
-        .some(id => id === techId);
-    });
+      return _hasTechnology(project, techId)
+    })
   }
 
   function getProjectByTech(techId: number) {
     return projects.find(project => {
-      return project
-        .technologiesId
-        .some(id => id === techId);
+      return _hasTechnology(project, techId);
     });
   }
 
-
-
+  function _hasTechnology(project: Project, techId: number) {
+    return project
+      .technologiesId.backend
+      .some(id => id === techId) || project
+        .technologiesId.frontend
+        .some(id => id === techId);
+  }
 
   return (
     <ProjectsContext.Provider value={{

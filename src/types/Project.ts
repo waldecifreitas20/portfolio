@@ -7,7 +7,10 @@ export type Project = {
   deployUrl: string,
   repositoryUrl: string,
   thumbnailUrl: string,
-  technologiesId: Array<number>,
+  technologiesId: {
+    backend: Array<number>,
+    frontend: Array<number>
+  },
   description: DualLanguageField,
   concepts: Array<DualLanguageField>,
 }

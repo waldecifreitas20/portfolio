@@ -5,7 +5,6 @@ import { ProjectsContext } from "@providers/ProjectProvider";
 import { ColoredLabel } from "@components/ColoredLabel";
 import { List } from "@components/List";
 import { Link } from "lucide-react";
-import type { Project } from "@/types/Project";
 
 
 interface TechnologyDetailsProps {

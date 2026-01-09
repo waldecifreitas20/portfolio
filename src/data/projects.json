@@ -14,17 +14,17 @@
         "en": "My personal portfolio website showcasing my projects and skills, built with ReactJS, TypeScript, and TailwindCSS. It features a clean and modern design, responsive layout, and smooth animations to provide an engaging user experience.",
         "pt": "Meu site pessoal de portfólio que exibe meus projetos e habilidades, construído com ReactJS, TypeScript e TailwindCSS. Apresenta um design limpo e moderno, layout responsivo e animações suaves para proporcionar uma experiência envolvente ao usuário."
       },
-      "technologiesId": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        9,
-        11
-      ],
+      "technologiesId": {
+        "frontend": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "backend": [
+          6,2,5,7
+        ]
+      },
       "concepts": [
         {
           "en": "Responsive Design",
@@ -60,7 +60,7 @@
       "id": 2,
       "name": "Makeshop",
       "category": {
-        "pt": "Loja Virtual", 
+        "pt": "Loja Virtual",
         "en": "E-commerce"
       },
       "deployUrl": "https://makeshop-store.vercel.app",
@@ -70,13 +70,17 @@
         "en": "Webstore for a fictional company called Makeshop, built with ReactJS, TypeScript, and TailwindCSS. It features a user-friendly interface, product catalog, shopping cart, and mocked checkout process.",
         "pt": "Loja virtual para uma empresa fictícia chamada Makeshop, construída com ReactJS, TypeScript e TailwindCSS. Apresenta uma interface amigável, catálogo de produtos, carrinho de compras e processo de checkout simulado."
       },
-      "technologiesId": [
-        1,
-        2,
-        3,
-        4,
-        12
-      ],
+      "technologiesId": {
+        "backend": [
+          12
+        ],
+        "frontend": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
       "concepts": [
         {
           "en": "Responsive Design",
@@ -86,10 +90,10 @@
           "en": "Type Safety with TypeScript",
           "pt": "Segurança de Tipos com TypeScript"
         },
-       {
+        {
           "en": "State Management",
           "pt": "Gerenciamento de Estado"
-       },
+        },
         {
           "en": "Shopping Cart",
           "pt": "Carrinho de compras"
@@ -104,12 +108,11 @@
         }
       ]
     },
-
     {
       "id": 3,
       "name": "Tasky",
       "category": {
-        "pt": "Gerenciador", 
+        "pt": "Gerenciador",
         "en": "Manager"
       },
       "deployUrl": "https://taskymg.vercel.app",
@@ -119,9 +122,19 @@
         "en": "Tasky is a task management application that helps users organize their everyday-tasks. Built with ReactJS, TypeScript, and TailwindCSS for the frontend, and Node.js with Express and PostgreSQL for the backend, Tasky offers a seamless user experience with features like task creation, editing, deletion and updating, along with a robust authentication system using Google account.",
         "pt": "Tasky é um aplicativo de gerenciamento de tarefas que ajuda os usuários a organizar suas tarefas diárias. Construído com ReactJS, TypeScript e TailwindCSS para o frontend, e Node.js com Express e PostgreSQL para o backend, o Tasky oferece uma experiência de usuário perfeita com recursos como criação, edição, exclusão e atualização de tarefas, com um sistema de autenticação robusto de conta Google."
       },
-      "technologiesId": [
-        1, 2, 3, 4, 6, 7, 8
-      ],
+      "technologiesId": {
+        "frontend": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "backend": [
+          6,
+          7,
+          8
+        ]
+      },
       "concepts": [
         {
           "en": "User Authentication with Google",
