@@ -5,6 +5,7 @@ import { ProjectsContext } from "@providers/ProjectProvider";
 import { ColoredLabel } from "@components/ColoredLabel";
 import { List } from "@components/List";
 import { Link } from "lucide-react";
+import type { Project } from "@/types/Project";
 
 
 interface TechnologyDetailsProps {
@@ -23,7 +24,8 @@ export function TechnologyDetails(props: TechnologyDetailsProps) {
   };
 
   function getProjects() {
-    return getProjectsByTech(1).map(project => project.name);
+    return getProjectsByTech(props.technology.id)
+      .map(project => project.name);
   }
 
 
