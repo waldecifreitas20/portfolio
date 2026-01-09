@@ -28,24 +28,16 @@ export function ProjectDetails(props: ProjectDetailsProps) {
   const { getTechnologyById } = useContext(TechnologyContext);
 
 
-  const techs = {
-    frontend: getTechs(false) as Technology[],
-    backend: getTechs(true) as Technology[],
-  }
+  const techs = getTechs();
 
-  function getTechs(isBackend: boolean) {
-    const technologies: Array<Technology> = [];
+  function getTechs() {
+    const { frontend, backend } = project.technologiesId
 
-    project.technologiesId.forEach(techId => {
-      const tech = getTechnologyById(techId);
-      const isAccepted = (isBackend == tech.isBackend) || (!isBackend && tech.isFrontend);
+    return {
+      frontend: frontend.map(techId => getTechnologyById(techId)),
+      backend: backend.map(techId => getTechnologyById(techId)),
+    }
 
-      if (isAccepted) {
-        technologies.push(tech);
-      }
-    });
-
-    return technologies;
   }
 
   return (
