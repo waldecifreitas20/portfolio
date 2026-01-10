@@ -10,7 +10,6 @@ import { GithubIcon } from "@components/GitHubIcon";
 import { useLanguage } from "@hooks/useLanguage";
 
 import { TechSubsection } from "./TechSubSection";
-import type { Technology } from "@/types/Technology";
 import { useContext, } from "react";
 import { TechnologyContext } from "@/providers/TechnologyProvider";
 
